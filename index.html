@@ -1,249 +1,58 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Humotion Pictures</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --black: #0A0A0A;
-  --black2: #0D0D0D;
-  --white: #F5F3EF;
-  --blue: #003399;
-  --blue-light: #0044CC;
-  --gray: #888888;
-  --border: rgba(0,51,153,0.15);
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--black); color: var(--white); font-family: 'Outfit', sans-serif; font-weight: 300; overflow-x: hidden; }
+HUMOTION PICTURES
+	•	PROJETS
+	•	A PROPOS
+	•	CONTACT
+FR
+EN
+PRODUCTION CINEMATOGRAPHIQUE INDEPENDANTE
+Humotion Pictures
+Société de production fondée par Michael Kibambi. Des histoires ancrées dans le réel, portées par l’émotion et la sincérité.
+DECOUVRIR NOS PROJETS
+→
+HP
+PROJETS
+En developpement
+COURT-METRAGE - EN DEVELOPPEMENT - COPRODUCTION RECHERCHEE
+Bonhomme
+DRAME - FICTION - 2025
+Dix mois apres avoir sauve la vie de son frere, Daniel attend toujours qu'il comprenne ce que ce jour-la a vraiment coute.
+FRATERNITE
+MASCULINITE
+DRAME INTIMISTE
+DEUIL EMOTIONNEL
++
+PROJETS A VENIR
+BIOGRAPHIE
+Michael Kibambi
+Realisateur, acteur et fondateur de Humotion Pictures, Michael Kibambi developpe un cinema ancre dans le reel, attentif aux relations humaines et aux emotions qui circulent entre les individus.
+Son travail explore les non-dits, les liens fraternels et la complexite des emotions masculines, avec une direction d'acteurs au centre de sa demarche.
+Il est actuellement en developpement sur son premier court-metrage en tant que realisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.
+EXPERIENCES
+2025
+Bonhomme
+Realisateur - Scenariste - Producteur
+2025
+Humotion Pictures
+Fondateur
+En cours
+Comedien
+Courts et longs metrages
+BANDE DEMO
+Voir le travail
 
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 20px 48px;
-  background: rgba(10,10,10,0.93);
-  backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid rgba(255,255,255,0.06);
-}
-.nav-logo { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); text-decoration: none; }
-.nav-logo span { color: var(--blue-light); }
-.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--white); }
-.lang-toggle { display: flex; gap: 4px; align-items: center; }
-.lang-btn { background: none; border: 0.5px solid rgba(255,255,255,0.15); color: var(--gray); font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.1em; padding: 4px 8px; cursor: pointer; transition: all 0.2s; }
-.lang-btn.active { background: var(--blue); border-color: var(--blue); color: white; }
-.lang-btn:hover:not(.active) { border-color: rgba(255,255,255,0.4); color: var(--white); }
 
-section { min-height: 100vh; padding: 120px 48px 80px; }
-.section-inner { max-width: 1000px; margin: 0 auto; }
-.section-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 16px; }
-.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 48px; }
-
-#accueil { display: flex; align-items: center; position: relative; overflow: hidden; }
-.hero-inner { max-width: 1000px; margin: 0 auto; width: 100%; }
-.hero-eyebrow { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
-.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 8vw, 96px); font-weight: 300; line-height: 1.0; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards; }
-.hero-title em { font-style: italic; color: var(--blue-light); }
-.hero-desc { font-size: 15px; line-height: 1.8; color: var(--gray); max-width: 520px; margin-bottom: 48px; opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards; }
-.hero-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); text-decoration: none; border-bottom: 0.5px solid var(--blue); padding-bottom: 6px; transition: gap 0.2s, border-color 0.2s; opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards; }
-.hero-cta:hover { gap: 20px; border-color: var(--blue-light); }
-.hero-bg-text { position: absolute; right: -20px; bottom: 60px; font-family: 'Cormorant Garamond', serif; font-size: clamp(120px, 18vw, 220px); font-weight: 300; color: rgba(0,51,153,0.04); line-height: 1; pointer-events: none; white-space: nowrap; }
-
-#projets { background: var(--black2); }
-.project-card { border: 0.5px solid rgba(255,255,255,0.07); padding: 48px; margin-bottom: 24px; transition: border-color 0.3s; }
-.project-card:hover { border-color: rgba(0,68,204,0.4); }
-.project-status { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 16px; }
-.project-title { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; margin-bottom: 12px; }
-.project-type { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 24px; }
-.project-logline { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; font-weight: 300; line-height: 1.7; color: rgba(245,243,239,0.75); max-width: 640px; margin-bottom: 32px; }
-.project-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-.tag { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; border: 0.5px solid rgba(255,255,255,0.15); padding: 5px 12px; color: var(--gray); }
-.project-future { border: 0.5px dashed rgba(255,255,255,0.07); padding: 32px 48px; display: flex; align-items: center; gap: 16px; color: rgba(255,255,255,0.2); }
-.project-future span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
-
-#apropos { background: var(--black); }
-.bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-bottom: 80px; }
-.bio-text { font-size: 15px; line-height: 1.9; color: rgba(245,243,239,0.7); }
-.bio-text p { margin-bottom: 20px; }
-.bio-credits { border-left: 1px solid var(--border); padding-left: 32px; }
-.bio-credit-item { padding: 16px 0; border-bottom: 0.5px solid rgba(255,255,255,0.05); }
-.bio-credit-item:last-child { border-bottom: none; }
-.credit-year { font-size: 10px; letter-spacing: 0.14em; color: var(--blue-light); margin-bottom: 4px; }
-.credit-title { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; margin-bottom: 4px; }
-.credit-role { font-size: 11px; color: var(--gray); letter-spacing: 0.06em; }
-
-.demo-separator { width: 40px; height: 1px; background: var(--blue); margin-bottom: 32px; }
-.video-wrap { position: relative; width: 100%; padding-bottom: 56.25%; border: 0.5px solid rgba(255,255,255,0.07); }
-.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-.onepager-wrap { margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
-.dl-btn { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); text-decoration: none; border: 0.5px solid rgba(255,255,255,0.2); padding: 12px 24px; transition: all 0.2s; }
-.dl-btn:hover { background: var(--blue); border-color: var(--blue); }
-
-#contact { background: var(--black2); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-.contact-item { margin-bottom: 32px; }
-.contact-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 8px; }
-.contact-value { font-size: 15px; color: var(--white); }
-.contact-value a { color: var(--white); text-decoration: none; border-bottom: 0.5px solid rgba(255,255,255,0.2); transition: border-color 0.2s; }
-.contact-value a:hover { border-color: var(--blue-light); }
-.contact-note { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; font-weight: 300; line-height: 1.7; color: rgba(245,243,239,0.5); }
-
-footer { padding: 24px 48px; border-top: 0.5px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; }
-footer span { font-size: 10px; letter-spacing: 0.1em; color: rgba(255,255,255,0.2); text-transform: uppercase; }
-
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 768px) {
-  nav { padding: 16px 24px; }
-  .nav-links { display: none; }
-  section { padding: 100px 24px 60px; }
-  .bio-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
-}
-</style>
-</head>
-<body>
-
-<nav>
-  <a href="#accueil" class="nav-logo">Humotion <span>Pictures</span></a>
-  <ul class="nav-links">
-    <li><a href="#projets" data-fr="Projets" data-en="Projects">Projets</a></li>
-    <li><a href="#apropos" data-fr="A propos" data-en="About">A propos</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('fr')">FR</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
-  </div>
-</nav>
-
-<section id="accueil">
-  <div class="hero-inner">
-    <p class="hero-eyebrow" data-fr="Production cinematographique independante" data-en="Independent film production">Production cinematographique independante</p>
-    <h1 class="hero-title">Humotion<br><em>Pictures</em></h1>
-    <p class="hero-desc" data-fr="Societe de production fondee par Michael Kibambi. Des histoires ancrees dans le reel, portees par l'emotion et la sincerite." data-en="Production company founded by Michael Kibambi. Stories rooted in reality, driven by emotion and sincerity.">Societe de production fondee par Michael Kibambi. Des histoires ancrees dans le reel, portees par l'emotion et la sincerite.</p>
-    <a href="#projets" class="hero-cta">
-      <span data-fr="Decouvrir nos projets" data-en="Explore our projects">Decouvrir nos projets</span>
-      <span>&#8594;</span>
-    </a>
-  </div>
-  <div class="hero-bg-text">HP</div>
-</section>
-
-<section id="projets">
-  <div class="section-inner">
-    <p class="section-label reveal" data-fr="Projets" data-en="Projects">Projets</p>
-    <h2 class="section-title reveal" data-fr="En developpement" data-en="In development">En developpement</h2>
-    <div class="project-card reveal">
-      <p class="project-status" data-fr="Court-metrage - En developpement - Coproduction recherchee" data-en="Short film - In development - Co-production sought">Court-metrage - En developpement - Coproduction recherchee</p>
-      <h3 class="project-title">Bonhomme</h3>
-      <p class="project-type" data-fr="Drame - Fiction - 2025" data-en="Drama - Fiction - 2025">Drame - Fiction - 2025</p>
-      <p class="project-logline" data-fr="Dix mois apres avoir sauve la vie de son frere, Daniel attend toujours qu'il comprenne ce que ce jour-la a vraiment coute." data-en="Ten months after saving his brother's life, Daniel is still waiting for him to understand what that day truly cost.">Dix mois apres avoir sauve la vie de son frere, Daniel attend toujours qu'il comprenne ce que ce jour-la a vraiment coute.</p>
-      <div class="project-tags">
-        <span class="tag" data-fr="Fraternite" data-en="Brotherhood">Fraternite</span>
-        <span class="tag" data-fr="Masculinite" data-en="Masculinity">Masculinite</span>
-        <span class="tag" data-fr="Drame intimiste" data-en="Intimate drama">Drame intimiste</span>
-        <span class="tag" data-fr="Deuil emotionnel" data-en="Emotional grief">Deuil emotionnel</span>
-      </div>
-    </div>
-    <div class="project-future reveal">
-      <span style="font-size:18px; opacity:0.3">+</span>
-      <span data-fr="Projets a venir" data-en="Upcoming projects">Projets a venir</span>
-    </div>
-  </div>
-</section>
-
-<section id="apropos">
-  <div class="section-inner">
-    <p class="section-label reveal" data-fr="Biographie" data-en="Biography">Biographie</p>
-    <h2 class="section-title reveal">Michael Kibambi</h2>
-    <div class="bio-grid">
-      <div class="bio-text reveal">
-        <p data-fr="Realisateur, acteur et fondateur de Humotion Pictures, Michael Kibambi developpe un cinema ancre dans le reel, attentif aux relations humaines et aux emotions qui circulent entre les individus." data-en="Director, actor and founder of Humotion Pictures, Michael Kibambi develops a cinema rooted in reality, attentive to human relationships and the emotions that flow between people.">Realisateur, acteur et fondateur de Humotion Pictures, Michael Kibambi developpe un cinema ancre dans le reel, attentif aux relations humaines et aux emotions qui circulent entre les individus.</p>
-        <p data-fr="Son travail explore les non-dits, les liens fraternels et la complexite des emotions masculines, avec une direction d'acteurs au centre de sa demarche." data-en="His work explores the unspoken, fraternal bonds and the complexity of masculine emotions, with performance at the heart of his approach.">Son travail explore les non-dits, les liens fraternels et la complexite des emotions masculines, avec une direction d'acteurs au centre de sa demarche.</p>
-        <p data-fr="Il est actuellement en developpement sur son premier court-metrage en tant que realisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction." data-en="He is currently developing his first short film as director-producer, Bonhomme, for which he is seeking co-production partners.">Il est actuellement en developpement sur son premier court-metrage en tant que realisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.</p>
-      </div>
-      <div class="bio-credits reveal">
-        <p class="section-label" style="margin-bottom:24px;" data-fr="Experiences" data-en="Experience">Experiences</p>
-        <div class="bio-credit-item">
-          <p class="credit-year">2025</p>
-          <p class="credit-title">Bonhomme</p>
-          <p class="credit-role" data-fr="Realisateur - Scenariste - Producteur" data-en="Director - Screenwriter - Producer">Realisateur - Scenariste - Producteur</p>
-        </div>
-        <div class="bio-credit-item">
-          <p class="credit-year">2025</p>
-          <p class="credit-title">Humotion Pictures</p>
-          <p class="credit-role" data-fr="Fondateur" data-en="Founder">Fondateur</p>
-        </div>
-        <div class="bio-credit-item">
-          <p class="credit-year" data-fr="En cours" data-en="Ongoing">En cours</p>
-          <p class="credit-title" data-fr="Comedien" data-en="Actor">Comedien</p>
-          <p class="credit-role" data-fr="Courts et longs metrages" data-en="Short and feature films">Courts et longs metrages</p>
-        </div>
-      </div>
-    </div>
-    <p class="section-label reveal" data-fr="Bande demo" data-en="Demo reel">Bande demo</p>
-    <h3 class="section-title reveal" style="font-size: clamp(28px, 3.5vw, 44px);" data-fr="Voir le travail" data-en="Watch the work">Voir le travail</h3>
-    <div class="demo-separator reveal"></div>
-    <div class="video-wrap reveal">
-      <iframe src="https://www.youtube.com/embed/hGvajXky5oE" title="Humotion Pictures - Bande demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="onepager-wrap reveal">
-      <a href="bonhomme_onepager_FR.pdf" class="dl-btn" download><span>&#8595;</span><span data-fr="One-pager Bonhomme (FR)" data-en="Bonhomme one-pager (FR)">One-pager Bonhomme (FR)</span></a>
-      <a href="bonhomme_onepager_EN.pdf" class="dl-btn" download><span>&#8595;</span><span data-fr="One-pager Bonhomme (EN)" data-en="Bonhomme one-pager (EN)">One-pager Bonhomme (EN)</span></a>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="section-inner">
-    <p class="section-label reveal">Contact</p>
-    <h2 class="section-title reveal" data-fr="Travaillons ensemble" data-en="Let's work together">Travaillons ensemble</h2>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-item reveal">
-          <p class="contact-label">Email</p>
-          <p class="contact-value"><a href="/cdn-cgi/l/email-protection#23404c4d57424057634b564e4c574a4c4d534a4057565146500d4551"><span class="__cf_email__" data-cfemail="8cefe3e2f8edeff8cce4f9e1e3f8e5e3e2fce5eff8f9fee9ffa2eafe">[email&#160;protected]</span></a></p>
-        </div>
-        <div class="contact-item reveal">
-          <p class="contact-label" data-fr="Structure" data-en="Company">Structure</p>
-          <p class="contact-value">Humotion Pictures</p>
-        </div>
-        <div class="contact-item reveal">
-          <p class="contact-label" data-fr="Base a" data-en="Based in">Base a</p>
-          <p class="contact-value">Paris, France</p>
-        </div>
-      </div>
-      <div class="reveal">
-        <p class="contact-note" data-fr="Ouvert aux discussions de coproduction, aux collaborations creatives et aux opportunites de representation." data-en="Open to co-production discussions, creative collaborations and representation opportunities.">Ouvert aux discussions de coproduction, aux collaborations creatives et aux opportunites de representation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <span>&#169; 2026 Humotion Pictures</span>
-  <span data-fr="Tous droits reserves" data-en="All rights reserved">Tous droits reserves</span>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function setLang(lang) {
-  document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
-  document.querySelectorAll('.lang-btn').forEach(function(b) {
-    if (b.getAttribute('onclick') === "setLang('" + lang + "')") b.classList.add('active');
-  });
-  document.querySelectorAll('[data-fr]').forEach(function(el) {
-    el.textContent = lang === 'fr' ? el.getAttribute('data-fr') : el.getAttribute('data-en');
-  });
-  document.documentElement.lang = lang;
-}
-
-var observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e, i) {
-    if (e.isIntersecting) {
-   
+↓
+ONE-PAGER BONHOMME (FR)
+↓
+ONE-PAGER BONHOMME (EN)
+CONTACT
+Travaillons ensemble
+EMAIL
+[email protected]
+STRUCTURE
+Humotion Pictures
+BASE A
+Paris, France
+Ouvert aux discussions de coproduction, aux collaborations creatives et aux opportunites de representation.
+© 2026 HUMOTION PICTURES
+TOUS DROITS RESERVES
