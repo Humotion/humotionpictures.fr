@@ -24,6 +24,8 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .section-inner{max-width:1000px;margin:0 auto;}
 .section-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px;}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);font-weight:300;line-height:1.1;margin-bottom:48px;}
+
+/* HERO */
 #accueil{display:flex;align-items:center;position:relative;overflow:hidden;}
 .hero-inner{max-width:1000px;margin:0 auto;width:100%;}
 .hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue-light);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards;}
@@ -33,17 +35,48 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .hero-cta{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--white);text-decoration:none;border-bottom:0.5px solid var(--blue);padding-bottom:6px;transition:gap 0.2s,border-color 0.2s;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
 .hero-cta:hover{gap:20px;border-color:var(--blue-light);}
 .hero-bg-text{position:absolute;right:-20px;bottom:60px;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,18vw,220px);font-weight:300;color:rgba(0,51,153,0.04);line-height:1;pointer-events:none;white-space:nowrap;}
-#projets{background:var(--black2);}
-.project-card{border:0.5px solid rgba(255,255,255,0.07);padding:48px;margin-bottom:24px;transition:border-color 0.3s;}
-.project-card:hover{border-color:rgba(0,68,204,0.4);}
-.project-status{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px;}
-.project-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;margin-bottom:12px;}
-.project-type{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:24px;}
-.project-logline{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.75);max-width:640px;margin-bottom:32px;}
+
+/* PROJETS GRID */
+#projets{background:var(--black2);padding:120px 0 80px;}
+.projets-header{max-width:1000px;margin:0 auto;padding:0 48px;margin-bottom:48px;}
+.films-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
+.film-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:16/9;}
+.film-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+.film-card:hover img{transform:scale(1.04);}
+.film-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%);transition:background 0.3s;}
+.film-card:hover .film-overlay{background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.4) 60%,rgba(0,0,0,0.1) 100%);}
+.film-info{position:absolute;bottom:0;left:0;right:0;padding:32px;}
+.film-year{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:8px;}
+.film-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:300;color:white;margin-bottom:6px;}
+.film-role{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.film-card-future{background:rgba(255,255,255,0.02);border:0.5px dashed rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;}
+.film-card-future-inner{text-align:center;}
+.film-card-future-inner span{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
+
+/* ORACLE DETAIL */
+.oracle-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
+.oracle-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:48px;}
+.oracle-img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.oracle-info{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:64px;}
+.oracle-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.75);}
+.oracle-meta{}
+.oracle-meta-item{padding:12px 0;border-bottom:0.5px solid rgba(255,255,255,0.05);}
+.oracle-meta-item:last-child{border-bottom:none;}
+.oracle-meta-label{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:4px;}
+.oracle-meta-value{font-size:13px;color:rgba(245,243,239,0.7);}
+.imdb-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);text-decoration:none;border:0.5px solid rgba(255,255,255,0.2);padding:10px 20px;transition:all 0.2s;margin-top:16px;}
+.imdb-link:hover{background:var(--blue);border-color:var(--blue);}
+
+/* BONHOMME */
+.bonhomme-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
+.bonhomme-header{margin-bottom:32px;}
+.bonhomme-status{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:12px;}
+.bonhomme-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;margin-bottom:16px;}
+.bonhomme-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.75);max-width:640px;margin-bottom:32px;}
 .project-tags{display:flex;gap:8px;flex-wrap:wrap;}
 .tag{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(255,255,255,0.15);padding:5px 12px;color:var(--gray);}
-.project-future{border:0.5px dashed rgba(255,255,255,0.07);padding:32px 48px;display:flex;align-items:center;gap:16px;color:rgba(255,255,255,0.2);}
-.project-future span{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;}
+
+/* A PROPOS */
 #apropos{background:var(--black);}
 .bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:80px;}
 .bio-text{font-size:15px;line-height:1.9;color:rgba(245,243,239,0.7);}
@@ -60,6 +93,8 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .onepager-wrap{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;}
 .dl-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);text-decoration:none;border:0.5px solid rgba(255,255,255,0.2);padding:12px 24px;transition:all 0.2s;}
 .dl-btn:hover{background:var(--blue);border-color:var(--blue);}
+
+/* CONTACT */
 #contact{background:var(--black2);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
 .contact-item{margin-bottom:32px;}
@@ -68,13 +103,25 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .contact-value a{color:var(--white);text-decoration:none;border-bottom:0.5px solid rgba(255,255,255,0.2);transition:border-color 0.2s;}
 .contact-value a:hover{border-color:var(--blue-light);}
 .contact-note{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.5);}
+
 footer{padding:24px 48px;border-top:0.5px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;}
 footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text-transform:uppercase;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:768px){nav{padding:16px 24px;}.nav-links{display:none;}section{padding:100px 24px 60px;}.bio-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}}
+@media(max-width:768px){
+  nav{padding:16px 24px;}.nav-links{display:none;}
+  section{padding:100px 24px 60px;}
+  #projets{padding:100px 0 60px;}
+  .projets-header{padding:0 24px;}
+  .films-grid{grid-template-columns:1fr;}
+  .oracle-grid{grid-template-columns:1fr;}
+  .oracle-info,.bio-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .oracle-detail,.bonhomme-detail{padding:40px 24px 0;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="#accueil" class="nav-logo">Humotion <span>Pictures</span></a>
   <ul class="nav-links">
@@ -88,6 +135,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="accueil">
   <div class="hero-inner">
     <p class="hero-eyebrow" id="hero-eyebrow">Production cin&#233;matographique ind&#233;pendante</p>
@@ -98,15 +146,72 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   <div class="hero-bg-text">HP</div>
 </section>
 
+<!-- PROJETS -->
 <section id="projets">
-  <div class="section-inner">
+  <div class="projets-header">
     <p class="section-label" id="lbl-projets">Projets</p>
-    <h2 class="section-title" id="title-projets">En d&#233;veloppement</h2>
-    <div class="project-card">
-      <p class="project-status" id="proj-status">Court-m&#233;trage &#183; En d&#233;veloppement &#183; Coproduction recherch&#233;e</p>
-      <h3 class="project-title">Bonhomme</h3>
-      <p class="project-type" id="proj-type">Drame &#183; Fiction &#183; 2025</p>
-      <p class="project-logline" id="proj-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
+    <h2 class="section-title" id="title-projets">Filmographie</h2>
+  </div>
+
+  <!-- GRILLE FILMS -->
+  <div class="films-grid">
+    <div class="film-card">
+      <img src="Oracle1.png" alt="Oracle Stone">
+      <div class="film-overlay"></div>
+      <div class="film-info">
+        <p class="film-year">2025</p>
+        <h3 class="film-title">Oracle Stone</h3>
+        <p class="film-role" id="oracle-role">R&#233;alisateur &#183; Sc&#233;nariste &#183; Producteur</p>
+      </div>
+    </div>
+    <div class="film-card-future">
+      <div class="film-card-future-inner">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(255,255,255,0.15);margin-bottom:12px;">Bonhomme</p>
+        <span id="bonhomme-soon">En d&#233;veloppement</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORACLE STONE DETAIL -->
+  <div class="oracle-detail">
+    <div style="margin-bottom:32px;">
+      <p class="section-label" style="margin-bottom:8px;">Oracle Stone</p>
+      <p style="font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray);" id="oracle-festival">Nikon Film Festival &#183; 2025</p>
+    </div>
+    <div class="oracle-grid">
+      <img class="oracle-img" src="Oracle1.png" alt="Oracle Stone">
+      <img class="oracle-img" src="Oracle2.png" alt="Oracle Stone">
+      <img class="oracle-img" src="Oracle3.png" alt="Oracle Stone">
+    </div>
+    <div class="oracle-info">
+      <div>
+        <p class="oracle-logline" id="oracle-logline">Un jeune homme fait sa demande en mariage, mais d&#232;s que sa petite amie touche la bague, de myst&#233;rieuses visions l&#8217;envahissent. Ce qu&#8217;elle a vu pourrait tout changer.</p>
+        <a href="https://www.imdb.com/title/tt35674375/" class="imdb-link" target="_blank">&#8599; IMDB</a>
+      </div>
+      <div class="oracle-meta">
+        <div class="oracle-meta-item">
+          <p class="oracle-meta-label" id="lbl-genre">Genre</p>
+          <p class="oracle-meta-value" id="oracle-genre">Fiction &#183; Fantastique</p>
+        </div>
+        <div class="oracle-meta-item">
+          <p class="oracle-meta-label" id="lbl-role">R&#244;le</p>
+          <p class="oracle-meta-value" id="oracle-role2">R&#233;alisateur &#183; Sc&#233;nariste &#183; Producteur</p>
+        </div>
+        <div class="oracle-meta-item">
+          <p class="oracle-meta-label" id="lbl-status">Statut</p>
+          <p class="oracle-meta-value" id="oracle-status">Termin&#233;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BONHOMME DETAIL -->
+  <div class="bonhomme-detail">
+    <div style="width:100%;height:0.5px;background:rgba(255,255,255,0.05);margin-bottom:64px;"></div>
+    <div class="bonhomme-header">
+      <p class="bonhomme-status" id="bonhomme-status">Court-m&#233;trage &#183; En d&#233;veloppement &#183; Coproduction recherch&#233;e</p>
+      <h3 class="bonhomme-title">Bonhomme</h3>
+      <p class="bonhomme-logline" id="bonhomme-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
       <div class="project-tags">
         <span class="tag" id="tag1">Fraternit&#233;</span>
         <span class="tag" id="tag2">Masculinit&#233;</span>
@@ -114,13 +219,10 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
         <span class="tag" id="tag4">Deuil &#233;motionnel</span>
       </div>
     </div>
-    <div class="project-future">
-      <span style="font-size:18px;opacity:0.3">+</span>
-      <span id="proj-future">Projets &#224; venir</span>
-    </div>
   </div>
 </section>
 
+<!-- A PROPOS -->
 <section id="apropos">
   <div class="section-inner">
     <p class="section-label" id="lbl-apropos">A propos</p>
@@ -153,6 +255,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <p class="section-label">Contact</p>
@@ -187,62 +290,58 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 <script>
 var t = {
   fr: {
-    'nav-projets': 'Projets',
-    'nav-apropos': 'A propos',
+    'nav-projets': 'Projets', 'nav-apropos': 'A propos',
     'hero-eyebrow': 'Production cin\u00e9matographique ind\u00e9pendante',
     'hero-desc': 'Soci\u00e9t\u00e9 de production ind\u00e9pendante. Des histoires humaines, ancr\u00e9es dans le r\u00e9el, port\u00e9es par l\u2019\u00e9motion et la sinc\u00e9rit\u00e9.',
     'hero-cta-text': 'D\u00e9couvrir nos projets',
-    'lbl-projets': 'Projets',
-    'title-projets': 'En d\u00e9veloppement',
-    'proj-status': 'Court-m\u00e9trage \u00b7 En d\u00e9veloppement \u00b7 Coproduction recherch\u00e9e',
-    'proj-type': 'Drame \u00b7 Fiction \u00b7 2025',
-    'proj-logline': 'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
+    'lbl-projets': 'Projets', 'title-projets': 'Filmographie',
+    'oracle-role': 'R\u00e9alisateur \u00b7 Sc\u00e9nariste \u00b7 Producteur',
+    'bonhomme-soon': 'En d\u00e9veloppement',
+    'oracle-festival': 'Nikon Film Festival \u00b7 2025',
+    'oracle-logline': 'Un jeune homme fait sa demande en mariage, mais d\u00e8s que sa petite amie touche la bague, de myst\u00e9rieuses visions l\u2019envahissent. Ce qu\u2019elle a vu pourrait tout changer.',
+    'lbl-genre': 'Genre', 'oracle-genre': 'Fiction \u00b7 Fantastique',
+    'lbl-role': 'R\u00f4le', 'oracle-role2': 'R\u00e9alisateur \u00b7 Sc\u00e9nariste \u00b7 Producteur',
+    'lbl-status': 'Statut', 'oracle-status': 'Termin\u00e9',
+    'bonhomme-status': 'Court-m\u00e9trage \u00b7 En d\u00e9veloppement \u00b7 Coproduction recherch\u00e9e',
+    'bonhomme-logline': 'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
     'tag1': 'Fraternit\u00e9', 'tag2': 'Masculinit\u00e9', 'tag3': 'Drame intimiste', 'tag4': 'Deuil \u00e9motionnel',
-    'proj-future': 'Projets \u00e0 venir',
-    'lbl-apropos': 'A propos',
-    'title-apropos': 'Humotion Pictures',
+    'lbl-apropos': 'A propos', 'title-apropos': 'Humotion Pictures',
     'bio-p1': 'Fond\u00e9e en 2025 par Michael KIBAMBI, Humotion Pictures est une soci\u00e9t\u00e9 de production ind\u00e9pendante bas\u00e9e dans les Hauts-de-France. La structure d\u00e9veloppe des projets ancr\u00e9s dans le r\u00e9el, port\u00e9s par une attention aux relations humaines et \u00e0 la v\u00e9rit\u00e9 des situations.',
     'bio-p2': 'Humotion Pictures accompagne des histoires o\u00f9 l\u2019intime rejoint l\u2019universel, avec la performance des acteurs au centre de chaque projet.',
     'bio-p3': 'La soci\u00e9t\u00e9 est actuellement en d\u00e9veloppement sur son premier court-m\u00e9trage, Bonhomme, et recherche des partenaires de coproduction.',
-    'lbl-exp': 'Equipe',
-    'role-label1': 'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
+    'lbl-exp': 'Equipe', 'role-label1': 'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
     'credit-bio1': 'Form\u00e9 au jeu d\u2019acteur, Michael KIBAMBI d\u00e9veloppe une approche de la r\u00e9alisation profond\u00e9ment ancr\u00e9e dans la performance. Convaincu que l\u2019\u00e9motion juste na\u00eet de la v\u00e9rit\u00e9 des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
-    'lbl-demo': 'Bande d\u00e9mo',
-    'title-demo': 'Voir le travail',
-    'title-contact': 'Travaillons ensemble',
-    'lbl-structure': 'Structure',
-    'lbl-based': 'Bas\u00e9 dans',
-    'location': 'Hauts-de-France',
+    'lbl-demo': 'Bande d\u00e9mo', 'title-demo': 'Voir le travail',
+    'title-contact': 'Travaillons ensemble', 'lbl-structure': 'Structure',
+    'lbl-based': 'Bas\u00e9 dans', 'location': 'Hauts-de-France',
     'contact-note': 'Ouverte aux discussions de coproduction, aux collaborations cr\u00e9atives et aux opportunit\u00e9s de repr\u00e9sentation.',
     'footer-rights': 'Tous droits r\u00e9serv\u00e9s'
   },
   en: {
-    'nav-projets': 'Projects',
-    'nav-apropos': 'About',
+    'nav-projets': 'Projects', 'nav-apropos': 'About',
     'hero-eyebrow': 'Independent film production',
     'hero-desc': 'Independent production company. Human stories, rooted in reality, driven by emotion and sincerity.',
     'hero-cta-text': 'Explore our projects',
-    'lbl-projets': 'Projects',
-    'title-projets': 'In development',
-    'proj-status': 'Short film \u00b7 In development \u00b7 Co-production sought',
-    'proj-type': 'Drama \u00b7 Fiction \u00b7 2025',
-    'proj-logline': 'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
+    'lbl-projets': 'Projects', 'title-projets': 'Filmography',
+    'oracle-role': 'Director \u00b7 Screenwriter \u00b7 Producer',
+    'bonhomme-soon': 'In development',
+    'oracle-festival': 'Nikon Film Festival \u00b7 2025',
+    'oracle-logline': 'A young man proposes to his girlfriend, but as soon as she touches the ring, mysterious visions invade her. What she saw could change everything.',
+    'lbl-genre': 'Genre', 'oracle-genre': 'Fiction \u00b7 Fantasy',
+    'lbl-role': 'Role', 'oracle-role2': 'Director \u00b7 Screenwriter \u00b7 Producer',
+    'lbl-status': 'Status', 'oracle-status': 'Completed',
+    'bonhomme-status': 'Short film \u00b7 In development \u00b7 Co-production sought',
+    'bonhomme-logline': 'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
     'tag1': 'Brotherhood', 'tag2': 'Masculinity', 'tag3': 'Intimate drama', 'tag4': 'Emotional grief',
-    'proj-future': 'Upcoming projects',
-    'lbl-apropos': 'About',
-    'title-apropos': 'Humotion Pictures',
+    'lbl-apropos': 'About', 'title-apropos': 'Humotion Pictures',
     'bio-p1': 'Founded in 2025 by Michael KIBAMBI, Humotion Pictures is an independent production company based in the Hauts-de-France region. The company develops projects rooted in reality, driven by a deep attention to human relationships and the truth of situations.',
     'bio-p2': 'Humotion Pictures supports stories where the intimate meets the universal, with performance at the heart of every project.',
     'bio-p3': 'The company is currently developing its first short film, Bonhomme, and is seeking co-production partners.',
-    'lbl-exp': 'Team',
-    'role-label1': 'Founder \u00b7 Actor \u00b7 Director',
+    'lbl-exp': 'Team', 'role-label1': 'Founder \u00b7 Actor \u00b7 Director',
     'credit-bio1': 'Trained as an actor, Michael KIBAMBI brings a performance-driven approach to directing. Convinced that genuine emotion comes from the truth of bodies and situations, he founded Humotion Pictures in 2025 to produce human, intimate and universal stories.',
-    'lbl-demo': 'Demo reel',
-    'title-demo': 'Watch the work',
-    'title-contact': "Let's work together",
-    'lbl-structure': 'Company',
-    'lbl-based': 'Based in',
-    'location': 'Hauts-de-France, France',
+    'lbl-demo': 'Demo reel', 'title-demo': 'Watch the work',
+    'title-contact': "Let's work together", 'lbl-structure': 'Company',
+    'lbl-based': 'Based in', 'location': 'Hauts-de-France, France',
     'contact-note': 'Open to co-production discussions, creative collaborations and representation opportunities.',
     'footer-rights': 'All rights reserved'
   }
