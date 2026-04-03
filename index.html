@@ -75,11 +75,12 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 </style>
 </head>
 <body>
+
 <nav>
   <a href="#accueil" class="nav-logo">Humotion <span>Pictures</span></a>
   <ul class="nav-links">
-    <li><a href="#projets">Projets</a></li>
-    <li><a href="#apropos">A propos</a></li>
+    <li><a href="#projets" id="nav-projets">Projets</a></li>
+    <li><a href="#apropos" id="nav-apropos">&#192; propos</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="lang-toggle">
@@ -90,71 +91,71 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 
 <section id="accueil">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Production cinematographique independante</p>
+    <p class="hero-eyebrow" id="hero-eyebrow">Production cin&#233;matographique ind&#233;pendante</p>
     <h1 class="hero-title">Humotion<br><em>Pictures</em></h1>
-    <p class="hero-desc">Societe de production fondee par Michael Kibambi. Des histoires ancrees dans le reel, portees par l'emotion et la sincerite.</p>
-    <a href="#projets" class="hero-cta"><span>Decouvrir nos projets</span><span>&#8594;</span></a>
+    <p class="hero-desc" id="hero-desc">Soci&#233;t&#233; de production fond&#233;e par Michael Kibambi. Des histoires ancr&#233;es dans le r&#233;el, port&#233;es par l&#8217;&#233;motion et la sinc&#233;rit&#233;.</p>
+    <a href="#projets" class="hero-cta"><span id="hero-cta-text">D&#233;couvrir nos projets</span><span>&#8594;</span></a>
   </div>
   <div class="hero-bg-text">HP</div>
 </section>
 
 <section id="projets">
   <div class="section-inner">
-    <p class="section-label">Projets</p>
-    <h2 class="section-title">En developpement</h2>
+    <p class="section-label" id="lbl-projets">Projets</p>
+    <h2 class="section-title" id="title-projets">En d&#233;veloppement</h2>
     <div class="project-card">
-      <p class="project-status">Court-metrage &middot; En developpement &middot; Coproduction recherchee</p>
+      <p class="project-status" id="proj-status">Court-m&#233;trage &middot; En d&#233;veloppement &middot; Coproduction recherch&#233;e</p>
       <h3 class="project-title">Bonhomme</h3>
-      <p class="project-type">Drame &middot; Fiction &middot; 2025</p>
-      <p class="project-logline">Dix mois apres avoir sauve la vie de son frere, Daniel attend toujours qu'il comprenne ce que ce jour-la a vraiment coute.</p>
+      <p class="project-type" id="proj-type">Drame &middot; Fiction &middot; 2025</p>
+      <p class="project-logline" id="proj-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
       <div class="project-tags">
-        <span class="tag">Fraternite</span>
-        <span class="tag">Masculinite</span>
-        <span class="tag">Drame intimiste</span>
-        <span class="tag">Deuil emotionnel</span>
+        <span class="tag" id="tag1">Fraternit&#233;</span>
+        <span class="tag" id="tag2">Masculinit&#233;</span>
+        <span class="tag" id="tag3">Drame intimiste</span>
+        <span class="tag" id="tag4">Deuil &#233;motionnel</span>
       </div>
     </div>
     <div class="project-future">
       <span style="font-size:18px;opacity:0.3">+</span>
-      <span>Projets a venir</span>
+      <span id="proj-future">Projets &#224; venir</span>
     </div>
   </div>
 </section>
 
 <section id="apropos">
   <div class="section-inner">
-    <p class="section-label">Biographie</p>
+    <p class="section-label" id="lbl-bio">Biographie</p>
     <h2 class="section-title">Michael Kibambi</h2>
     <div class="bio-grid">
       <div class="bio-text">
-        <p>Realisateur, acteur et fondateur de Humotion Pictures, Michael Kibambi developpe un cinema ancre dans le reel, attentif aux relations humaines et aux emotions qui circulent entre les individus.</p>
-        <p>Son travail explore les non-dits, les liens fraternels et la complexite des emotions masculines, avec une direction d'acteurs au centre de sa demarche.</p>
-        <p>Il est actuellement en developpement sur son premier court-metrage en tant que realisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.</p>
+        <p id="bio-p1">R&#233;alisateur, acteur et fondateur de Humotion Pictures, Michael Kibambi d&#233;veloppe un cin&#233;ma ancr&#233; dans le r&#233;el, attentif aux relations humaines et aux &#233;motions qui circulent entre les individus.</p>
+        <p id="bio-p2">Son travail explore les non-dits, les liens fraternels et la complexit&#233; des &#233;motions masculines, avec une direction d&#8217;acteurs au centre de sa d&#233;marche.</p>
+        <p id="bio-p3">Il est actuellement en d&#233;veloppement sur son premier court-m&#233;trage en tant que r&#233;alisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.</p>
       </div>
       <div class="bio-credits">
-        <p class="section-label" style="margin-bottom:24px;">Experiences</p>
+        <p class="section-label" id="lbl-exp" style="margin-bottom:24px;">Exp&#233;riences</p>
         <div class="bio-credit-item">
           <p class="credit-year">2025</p>
           <p class="credit-title">Bonhomme</p>
-          <p class="credit-role">Realisateur &middot; Scenariste &middot; Producteur</p>
+          <p class="credit-role" id="role1">R&#233;alisateur &middot; Sc&#233;nariste &middot; Producteur</p>
         </div>
         <div class="bio-credit-item">
           <p class="credit-year">2025</p>
           <p class="credit-title">Humotion Pictures</p>
-          <p class="credit-role">Fondateur</p>
+          <p class="credit-role" id="role2">Fondateur</p>
         </div>
         <div class="bio-credit-item">
-          <p class="credit-year">En cours</p>
-          <p class="credit-title">Comedien</p>
-          <p class="credit-role">Courts et longs metrages</p>
+          <p class="credit-year" id="year3">En cours</p>
+          <p class="credit-title" id="credit-actor">Com&#233;dien</p>
+          <p class="credit-role" id="role3">Courts et longs m&#233;trages</p>
         </div>
       </div>
     </div>
-    <p class="section-label">Bande demo</p>
-    <h3 class="section-title" style="font-size:clamp(28px,3.5vw,44px);">Voir le travail</h3>
+    <p class="section-label" id="lbl-demo">Bande d&#233;mo</p>
+    <h3 class="section-title" id="title-demo" style="font-size:clamp(28px,3.5vw,44px);">Voir le travail</h3>
     <div class="demo-separator"></div>
     <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/hGvajXky5oE" title="Bande demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/hGvajXky5oE" title="Bande demo Humotion Pictures" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="onepager-wrap">
       <a href="bonhomme_onepager_FR.pdf" class="dl-btn" download>&#8595; One-pager Bonhomme (FR)</a>
@@ -166,7 +167,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 <section id="contact">
   <div class="section-inner">
     <p class="section-label">Contact</p>
-    <h2 class="section-title">Travaillons ensemble</h2>
+    <h2 class="section-title" id="title-contact">Travaillons ensemble</h2>
     <div class="contact-grid">
       <div>
         <div class="contact-item">
@@ -174,16 +175,16 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
           <p class="contact-value"><a href="mailto:contact@humotionpictures.fr">contact@humotionpictures.fr</a></p>
         </div>
         <div class="contact-item">
-          <p class="contact-label">Structure</p>
+          <p class="contact-label" id="lbl-structure">Structure</p>
           <p class="contact-value">Humotion Pictures</p>
         </div>
         <div class="contact-item">
-          <p class="contact-label">Base a</p>
+          <p class="contact-label" id="lbl-based">Bas&#233; &#224;</p>
           <p class="contact-value">Paris, France</p>
         </div>
       </div>
       <div>
-        <p class="contact-note">Ouvert aux discussions de coproduction, aux collaborations creatives et aux opportunites de representation.</p>
+        <p class="contact-note" id="contact-note">Ouvert aux discussions de coproduction, aux collaborations cr&#233;atives et aux opportunit&#233;s de repr&#233;sentation.</p>
       </div>
     </div>
   </div>
@@ -191,14 +192,86 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 
 <footer>
   <span>&#169; 2026 Humotion Pictures</span>
-  <span>Tous droits reserves</span>
+  <span id="footer-rights">Tous droits r&#233;serv&#233;s</span>
 </footer>
 
 <script>
-function setLang(lang){
+var t = {
+  fr: {
+    'nav-projets': 'Projets',
+    'nav-apropos': 'A propos',
+    'hero-eyebrow': 'Production cin\u00e9matographique ind\u00e9pendante',
+    'hero-desc': 'Soci\u00e9t\u00e9 de production fond\u00e9e par Michael Kibambi. Des histoires ancr\u00e9es dans le r\u00e9el, port\u00e9es par l\u2019\u00e9motion et la sinc\u00e9rit\u00e9.',
+    'hero-cta-text': 'D\u00e9couvrir nos projets',
+    'lbl-projets': 'Projets',
+    'title-projets': 'En d\u00e9veloppement',
+    'proj-status': 'Court-m\u00e9trage \u00b7 En d\u00e9veloppement \u00b7 Coproduction recherch\u00e9e',
+    'proj-type': 'Drame \u00b7 Fiction \u00b7 2025',
+    'proj-logline': 'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
+    'tag1': 'Fraternit\u00e9', 'tag2': 'Masculinit\u00e9', 'tag3': 'Drame intimiste', 'tag4': 'Deuil \u00e9motionnel',
+    'proj-future': 'Projets \u00e0 venir',
+    'lbl-bio': 'Biographie',
+    'bio-p1': 'R\u00e9alisateur, acteur et fondateur de Humotion Pictures, Michael Kibambi d\u00e9veloppe un cin\u00e9ma ancr\u00e9 dans le r\u00e9el, attentif aux relations humaines et aux \u00e9motions qui circulent entre les individus.',
+    'bio-p2': 'Son travail explore les non-dits, les liens fraternels et la complexit\u00e9 des \u00e9motions masculines, avec une direction d\u2019acteurs au centre de sa d\u00e9marche.',
+    'bio-p3': 'Il est actuellement en d\u00e9veloppement sur son premier court-m\u00e9trage en tant que r\u00e9alisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.',
+    'lbl-exp': 'Exp\u00e9riences',
+    'role1': 'R\u00e9alisateur \u00b7 Sc\u00e9nariste \u00b7 Producteur',
+    'role2': 'Fondateur',
+    'year3': 'En cours',
+    'credit-actor': 'Com\u00e9dien',
+    'role3': 'Courts et longs m\u00e9trages',
+    'lbl-demo': 'Bande d\u00e9mo',
+    'title-demo': 'Voir le travail',
+    'title-contact': 'Travaillons ensemble',
+    'lbl-structure': 'Structure',
+    'lbl-based': 'Bas\u00e9 \u00e0',
+    'contact-note': 'Ouvert aux discussions de coproduction, aux collaborations cr\u00e9atives et aux opportunit\u00e9s de repr\u00e9sentation.',
+    'footer-rights': 'Tous droits r\u00e9serv\u00e9s'
+  },
+  en: {
+    'nav-projets': 'Projects',
+    'nav-apropos': 'About',
+    'hero-eyebrow': 'Independent film production',
+    'hero-desc': 'Production company founded by Michael Kibambi. Stories rooted in reality, driven by emotion and sincerity.',
+    'hero-cta-text': 'Explore our projects',
+    'lbl-projets': 'Projects',
+    'title-projets': 'In development',
+    'proj-status': 'Short film \u00b7 In development \u00b7 Co-production sought',
+    'proj-type': 'Drama \u00b7 Fiction \u00b7 2025',
+    'proj-logline': 'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
+    'tag1': 'Brotherhood', 'tag2': 'Masculinity', 'tag3': 'Intimate drama', 'tag4': 'Emotional grief',
+    'proj-future': 'Upcoming projects',
+    'lbl-bio': 'Biography',
+    'bio-p1': 'Director, actor and founder of Humotion Pictures, Michael Kibambi develops a cinema rooted in reality, attentive to human relationships and the emotions that flow between people.',
+    'bio-p2': 'His work explores the unspoken, fraternal bonds and the complexity of masculine emotions, with performance at the heart of his approach.',
+    'bio-p3': 'He is currently developing his first short film as director-producer, Bonhomme, for which he is seeking co-production partners.',
+    'lbl-exp': 'Experience',
+    'role1': 'Director \u00b7 Screenwriter \u00b7 Producer',
+    'role2': 'Founder',
+    'year3': 'Ongoing',
+    'credit-actor': 'Actor',
+    'role3': 'Short and feature films',
+    'lbl-demo': 'Demo reel',
+    'title-demo': 'Watch the work',
+    'title-contact': "Let's work together",
+    'lbl-structure': 'Company',
+    'lbl-based': 'Based in',
+    'contact-note': 'Open to co-production discussions, creative collaborations and representation opportunities.',
+    'footer-rights': 'All rights reserved'
+  }
+};
+
+function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
-  document.querySelectorAll('.lang-btn').forEach(function(b){if(b.getAttribute('onclick')==="setLang('"+lang+"')")b.classList.add('active');});
-  document.documentElement.lang=lang;
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    if(b.getAttribute('onclick')==="setLang('"+lang+"')")b.classList.add('active');
+  });
+  var strings = t[lang];
+  for(var id in strings){
+    var el = document.getElementById(id);
+    if(el) el.textContent = strings[id];
+  }
+  document.documentElement.lang = lang;
 }
 </script>
 </body>
