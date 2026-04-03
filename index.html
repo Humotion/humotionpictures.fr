@@ -49,11 +49,11 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .bio-text{font-size:15px;line-height:1.9;color:rgba(245,243,239,0.7);}
 .bio-text p{margin-bottom:20px;}
 .bio-credits{border-left:1px solid var(--border);padding-left:32px;}
-.bio-credit-item{padding:16px 0;border-bottom:0.5px solid rgba(255,255,255,0.05);}
+.bio-credit-item{padding:20px 0;border-bottom:0.5px solid rgba(255,255,255,0.05);}
 .bio-credit-item:last-child{border-bottom:none;}
-.credit-year{font-size:10px;letter-spacing:0.14em;color:var(--blue-light);margin-bottom:4px;}
-.credit-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;margin-bottom:4px;}
-.credit-role{font-size:11px;color:var(--gray);letter-spacing:0.06em;}
+.credit-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:4px;}
+.credit-role{font-size:11px;color:var(--blue-light);letter-spacing:0.08em;margin-bottom:12px;}
+.credit-bio{font-size:13px;line-height:1.7;color:rgba(245,243,239,0.55);}
 .demo-separator{width:40px;height:1px;background:var(--blue);margin-bottom:32px;}
 .video-wrap{position:relative;width:100%;padding-bottom:56.25%;border:0.5px solid rgba(255,255,255,0.07);}
 .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
@@ -123,29 +123,20 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 
 <section id="apropos">
   <div class="section-inner">
-    <p class="section-label" id="lbl-bio">Biographie</p>
-    <h2 class="section-title">Michael Kibambi</h2>
+    <p class="section-label" id="lbl-apropos">A propos</p>
+    <h2 class="section-title" id="title-apropos">Humotion Pictures</h2>
     <div class="bio-grid">
       <div class="bio-text">
-        <p id="bio-p1">Acteur, r&#233;alisateur et fondateur de Humotion Pictures, Michael Kibambi d&#233;veloppe un cin&#233;ma ancr&#233; dans le r&#233;el, attentif aux relations humaines et aux &#233;motions qui circulent entre les individus.</p>
-        <p id="bio-p2">Il est actuellement en d&#233;veloppement sur son premier court-m&#233;trage en tant que r&#233;alisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.</p>
+        <p id="bio-p1">Fond&#233;e en 2025 par Michael KIBAMBI, Humotion Pictures est une soci&#233;t&#233; de production ind&#233;pendante bas&#233;e dans les Hauts-de-France. La structure d&#233;veloppe des projets ancr&#233;s dans le r&#233;el, port&#233;s par une attention aux relations humaines et &#224; la v&#233;rit&#233; des situations.</p>
+        <p id="bio-p2">Humotion Pictures accompagne des histoires o&#249; l&#8217;intime rejoint l&#8217;universel, avec la performance des acteurs au centre de chaque projet.</p>
+        <p id="bio-p3">La soci&#233;t&#233; est actuellement en d&#233;veloppement sur son premier court-m&#233;trage, Bonhomme, et recherche des partenaires de coproduction.</p>
       </div>
       <div class="bio-credits">
-        <p class="section-label" id="lbl-exp" style="margin-bottom:24px;">Exp&#233;riences</p>
+        <p class="section-label" id="lbl-exp" style="margin-bottom:24px;">Equipe</p>
         <div class="bio-credit-item">
-          <p class="credit-year">2025</p>
-          <p class="credit-title">Bonhomme</p>
-          <p class="credit-role" id="role1">R&#233;alisateur &#183; Sc&#233;nariste &#183; Producteur</p>
-        </div>
-        <div class="bio-credit-item">
-          <p class="credit-year">2025</p>
-          <p class="credit-title">Humotion Pictures</p>
-          <p class="credit-role" id="role2">Fondateur</p>
-        </div>
-        <div class="bio-credit-item">
-          <p class="credit-year" id="year3">En cours</p>
-          <p class="credit-title" id="credit-actor">Com&#233;dien</p>
-          <p class="credit-role" id="role3">Courts et longs m&#233;trages</p>
+          <p class="credit-name">Michael KIBAMBI</p>
+          <p class="credit-role" id="role-label1">Fondateur &#183; Acteur &#183; R&#233;alisateur</p>
+          <p class="credit-bio" id="credit-bio1">Form&#233; au jeu d&#8217;acteur, Michael KIBAMBI d&#233;veloppe une approche de la r&#233;alisation profond&#233;ment ancr&#233;e dans la performance. Convaincu que l&#8217;&#233;motion juste na&#238;t de la v&#233;rit&#233; des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.</p>
         </div>
       </div>
     </div>
@@ -177,12 +168,12 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
           <p class="contact-value">Humotion Pictures</p>
         </div>
         <div class="contact-item">
-          <p class="contact-label" id="lbl-based">Bas&#233; &#224;</p>
-          <p class="contact-value">Paris, France</p>
+          <p class="contact-label" id="lbl-based">Bas&#233; dans</p>
+          <p class="contact-value" id="location">Hauts-de-France</p>
         </div>
       </div>
       <div>
-        <p class="contact-note" id="contact-note">Ouvert aux discussions de coproduction, aux collaborations cr&#233;atives et aux opportunit&#233;s de repr&#233;sentation.</p>
+        <p class="contact-note" id="contact-note">Ouverte aux discussions de coproduction, aux collaborations cr&#233;atives et aux opportunit&#233;s de repr&#233;sentation.</p>
       </div>
     </div>
   </div>
@@ -208,21 +199,21 @@ var t = {
     'proj-logline': 'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
     'tag1': 'Fraternit\u00e9', 'tag2': 'Masculinit\u00e9', 'tag3': 'Drame intimiste', 'tag4': 'Deuil \u00e9motionnel',
     'proj-future': 'Projets \u00e0 venir',
-    'lbl-bio': 'Biographie',
-    'bio-p1': 'Acteur, r\u00e9alisateur et fondateur de Humotion Pictures, Michael Kibambi d\u00e9veloppe un cin\u00e9ma ancr\u00e9 dans le r\u00e9el, attentif aux relations humaines et aux \u00e9motions qui circulent entre les individus.',
-    'bio-p2': 'Il est actuellement en d\u00e9veloppement sur son premier court-m\u00e9trage en tant que r\u00e9alisateur-producteur, Bonhomme, pour lequel il recherche des partenaires de coproduction.',
-    'lbl-exp': 'Exp\u00e9riences',
-    'role1': 'R\u00e9alisateur \u00b7 Sc\u00e9nariste \u00b7 Producteur',
-    'role2': 'Fondateur',
-    'year3': 'En cours',
-    'credit-actor': 'Com\u00e9dien',
-    'role3': 'Courts et longs m\u00e9trages',
+    'lbl-apropos': 'A propos',
+    'title-apropos': 'Humotion Pictures',
+    'bio-p1': 'Fond\u00e9e en 2025 par Michael KIBAMBI, Humotion Pictures est une soci\u00e9t\u00e9 de production ind\u00e9pendante bas\u00e9e dans les Hauts-de-France. La structure d\u00e9veloppe des projets ancr\u00e9s dans le r\u00e9el, port\u00e9s par une attention aux relations humaines et \u00e0 la v\u00e9rit\u00e9 des situations.',
+    'bio-p2': 'Humotion Pictures accompagne des histoires o\u00f9 l\u2019intime rejoint l\u2019universel, avec la performance des acteurs au centre de chaque projet.',
+    'bio-p3': 'La soci\u00e9t\u00e9 est actuellement en d\u00e9veloppement sur son premier court-m\u00e9trage, Bonhomme, et recherche des partenaires de coproduction.',
+    'lbl-exp': 'Equipe',
+    'role-label1': 'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
+    'credit-bio1': 'Form\u00e9 au jeu d\u2019acteur, Michael KIBAMBI d\u00e9veloppe une approche de la r\u00e9alisation profond\u00e9ment ancr\u00e9e dans la performance. Convaincu que l\u2019\u00e9motion juste na\u00eet de la v\u00e9rit\u00e9 des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
     'lbl-demo': 'Bande d\u00e9mo',
     'title-demo': 'Voir le travail',
     'title-contact': 'Travaillons ensemble',
     'lbl-structure': 'Structure',
-    'lbl-based': 'Bas\u00e9 \u00e0',
-    'contact-note': 'Ouvert aux discussions de coproduction, aux collaborations cr\u00e9atives et aux opportunit\u00e9s de repr\u00e9sentation.',
+    'lbl-based': 'Bas\u00e9 dans',
+    'location': 'Hauts-de-France',
+    'contact-note': 'Ouverte aux discussions de coproduction, aux collaborations cr\u00e9atives et aux opportunit\u00e9s de repr\u00e9sentation.',
     'footer-rights': 'Tous droits r\u00e9serv\u00e9s'
   },
   en: {
@@ -238,20 +229,20 @@ var t = {
     'proj-logline': 'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
     'tag1': 'Brotherhood', 'tag2': 'Masculinity', 'tag3': 'Intimate drama', 'tag4': 'Emotional grief',
     'proj-future': 'Upcoming projects',
-    'lbl-bio': 'Biography',
-    'bio-p1': 'Actor, director and founder of Humotion Pictures, Michael Kibambi develops a cinema rooted in reality, attentive to human relationships and the emotions that flow between people.',
-    'bio-p2': 'He is currently developing his first short film as director-producer, Bonhomme, for which he is seeking co-production partners.',
-    'lbl-exp': 'Experience',
-    'role1': 'Director \u00b7 Screenwriter \u00b7 Producer',
-    'role2': 'Founder',
-    'year3': 'Ongoing',
-    'credit-actor': 'Actor',
-    'role3': 'Short and feature films',
+    'lbl-apropos': 'About',
+    'title-apropos': 'Humotion Pictures',
+    'bio-p1': 'Founded in 2025 by Michael KIBAMBI, Humotion Pictures is an independent production company based in the Hauts-de-France region. The company develops projects rooted in reality, driven by a deep attention to human relationships and the truth of situations.',
+    'bio-p2': 'Humotion Pictures supports stories where the intimate meets the universal, with performance at the heart of every project.',
+    'bio-p3': 'The company is currently developing its first short film, Bonhomme, and is seeking co-production partners.',
+    'lbl-exp': 'Team',
+    'role-label1': 'Founder \u00b7 Actor \u00b7 Director',
+    'credit-bio1': 'Trained as an actor, Michael KIBAMBI brings a performance-driven approach to directing. Convinced that genuine emotion comes from the truth of bodies and situations, he founded Humotion Pictures in 2025 to produce human, intimate and universal stories.',
     'lbl-demo': 'Demo reel',
     'title-demo': 'Watch the work',
     'title-contact': "Let's work together",
     'lbl-structure': 'Company',
     'lbl-based': 'Based in',
+    'location': 'Hauts-de-France, France',
     'contact-note': 'Open to co-production discussions, creative collaborations and representation opportunities.',
     'footer-rights': 'All rights reserved'
   }
