@@ -117,16 +117,52 @@ section{min-height:100vh;padding:120px 48px 80px;}
 footer{padding:24px 48px;border-top:0.5px solid rgba(0,0,0,0.08);display:flex;justify-content:space-between;align-items:center;background:var(--cream);}
 footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-transform:uppercase;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
 @media(max-width:768px){
-  nav{grid-template-columns:1fr auto;padding:16px 24px;}
-  .nav-left,.nav-right{display:none;}
-  section{padding:100px 24px 60px;}
-  #projets{padding:100px 0 60px;}
-  .projets-header{padding:0 24px;}
+  /* NAV */
+  nav{grid-template-columns:auto 1fr;padding:14px 20px;gap:0;}
+  .nav-left{display:none;}
+  .nav-right{justify-content:flex-end;gap:12px;}
+  .nav-center{justify-content:flex-start;}
+  .nav-logo img{height:52px;}
+
+  /* HERO */
+  .hero-content{padding:0 24px;}
+  .hero-eyebrow{font-size:9px;}
+  .hero-desc{font-size:13px;margin-bottom:32px;}
+  .hero-cta{font-size:10px;}
+
+  /* SECTIONS */
+  section{padding:80px 20px 60px;}
+  #projets{padding:80px 0 60px;}
+  .projets-header{padding:0 20px;margin-bottom:32px;}
+  .section-title{font-size:clamp(28px,7vw,42px);margin-bottom:32px;}
+
+  /* GRILLE FILMS */
   .films-grid{grid-template-columns:1fr;}
-  .oracle-info,.bio-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
-  .oracle-detail,.bonhomme-detail{padding:40px 24px 0;}
-  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+  .film-card-future{min-height:160px;}
+
+  /* ORACLE */
+  .oracle-detail{padding:32px 20px 0;}
+  .oracle-info{grid-template-columns:1fr;gap:24px;margin-bottom:40px;}
+  .oracle-logline{font-size:17px;}
+
+  /* BONHOMME */
+  .bonhomme-detail{padding:40px 20px 0;}
+  .bonhomme-title{font-size:clamp(32px,8vw,52px);}
+  .bonhomme-logline{font-size:17px;}
+
+  /* BIO */
+  .bio-grid{grid-template-columns:1fr;gap:32px;margin-bottom:48px;}
+  .bio-credits{padding-left:0;}
+  .bio-text{font-size:14px;}
+
+  /* CONTACT */
+  .contact-grid{grid-template-columns:1fr;gap:32px;}
+  .contact-note{font-size:18px;}
+
+  /* FOOTER */
+  footer{padding:20px 20px;flex-direction:column;gap:8px;text-align:center;}
 }
 </style>
 </head>
