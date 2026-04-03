@@ -11,8 +11,8 @@
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(10,10,10,0.93);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(255,255,255,0.06);}
-.nav-logo{font-family:'Outfit',sans-serif;font-weight:500;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);text-decoration:none;}
-.nav-logo span{color:var(--blue-light);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:40px;width:auto;mix-blend-mode:screen;}
 .nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
 .nav-links a{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
@@ -125,7 +125,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 <body>
 
 <nav>
-  <a href="#accueil" class="nav-logo">Humotion <span>Pictures</span></a>
+  <a href="#accueil" class="nav-logo"><img src="logo.png" alt="Humotion Pictures"></a>
   <ul class="nav-links">
     <li><a href="#projets" id="nav-projets">Projets</a></li>
     <li><a href="#apropos" id="nav-apropos">A propos</a></li>
