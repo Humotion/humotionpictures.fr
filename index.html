@@ -36,7 +36,7 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .hero-cta:hover{gap:20px;border-color:var(--blue-light);}
 .hero-bg-text{position:absolute;right:-20px;bottom:60px;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,18vw,220px);font-weight:300;color:rgba(0,51,153,0.04);line-height:1;pointer-events:none;white-space:nowrap;}
 
-/* PROJETS GRID */
+/* PROJETS */
 #projets{background:var(--black2);padding:120px 0 80px;}
 .projets-header{max-width:1000px;margin:0 auto;padding:0 48px;margin-bottom:48px;}
 .films-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
@@ -53,13 +53,18 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .film-card-future-inner{text-align:center;}
 .film-card-future-inner span{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
 
-/* ORACLE DETAIL */
+/* ORACLE SLIDER */
 .oracle-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
-.oracle-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:48px;}
-.oracle-img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.slider{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:48px;}
+.slider-track{display:flex;height:100%;transition:transform 0.7s ease;}
+.slide{min-width:100%;height:100%;}
+.slide img{width:100%;height:100%;object-fit:cover;}
+.slider-dots{display:flex;justify-content:center;gap:8px;margin-top:16px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:background 0.3s;}
+.dot.active{background:var(--blue-light);}
+
 .oracle-info{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:64px;}
 .oracle-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.75);}
-.oracle-meta{}
 .oracle-meta-item{padding:12px 0;border-bottom:0.5px solid rgba(255,255,255,0.05);}
 .oracle-meta-item:last-child{border-bottom:none;}
 .oracle-meta-label{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:4px;}
@@ -69,7 +74,6 @@ section{min-height:100vh;padding:120px 48px 80px;}
 
 /* BONHOMME */
 .bonhomme-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
-.bonhomme-header{margin-bottom:32px;}
 .bonhomme-status{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:12px;}
 .bonhomme-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;margin-bottom:16px;}
 .bonhomme-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.75);max-width:640px;margin-bottom:32px;}
@@ -103,7 +107,6 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .contact-value a{color:var(--white);text-decoration:none;border-bottom:0.5px solid rgba(255,255,255,0.2);transition:border-color 0.2s;}
 .contact-value a:hover{border-color:var(--blue-light);}
 .contact-note{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(245,243,239,0.5);}
-
 footer{padding:24px 48px;border-top:0.5px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;}
 footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text-transform:uppercase;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
@@ -113,7 +116,6 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   #projets{padding:100px 0 60px;}
   .projets-header{padding:0 24px;}
   .films-grid{grid-template-columns:1fr;}
-  .oracle-grid{grid-template-columns:1fr;}
   .oracle-info,.bio-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
   .oracle-detail,.bonhomme-detail{padding:40px 24px 0;}
   footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
@@ -135,7 +137,6 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="accueil">
   <div class="hero-inner">
     <p class="hero-eyebrow" id="hero-eyebrow">Production cin&#233;matographique ind&#233;pendante</p>
@@ -146,14 +147,12 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   <div class="hero-bg-text">HP</div>
 </section>
 
-<!-- PROJETS -->
 <section id="projets">
   <div class="projets-header">
     <p class="section-label" id="lbl-projets">Projets</p>
     <h2 class="section-title" id="title-projets">Filmographie</h2>
   </div>
 
-  <!-- GRILLE FILMS -->
   <div class="films-grid">
     <div class="film-card">
       <img src="Oracle1.png" alt="Oracle Stone">
@@ -172,30 +171,37 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
     </div>
   </div>
 
-  <!-- ORACLE STONE DETAIL -->
   <div class="oracle-detail">
     <div style="margin-bottom:32px;">
       <p class="section-label" style="margin-bottom:8px;">Oracle Stone</p>
       <p style="font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray);" id="oracle-festival">Nikon Film Festival &#183; 2025</p>
     </div>
-    <div class="oracle-grid">
-      <img class="oracle-img" src="Oracle1.png" alt="Oracle Stone">
-      <img class="oracle-img" src="Oracle2.png" alt="Oracle Stone">
-      <img class="oracle-img" src="Oracle3.png" alt="Oracle Stone">
+
+    <!-- SLIDER -->
+    <div class="slider">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="Oracle1.png" alt="Oracle Stone"></div>
+        <div class="slide"><img src="Oracle2.png" alt="Oracle Stone"></div>
+        <div class="slide"><img src="Oracle3.png" alt="Oracle Stone"></div>
+        <div class="slide"><img src="Oracle4.png" alt="Oracle Stone"></div>
+      </div>
     </div>
-    <div class="oracle-info">
+    <div class="slider-dots" id="sliderDots">
+      <div class="dot active" onclick="goToSlide(0)"></div>
+      <div class="dot" onclick="goToSlide(1)"></div>
+      <div class="dot" onclick="goToSlide(2)"></div>
+      <div class="dot" onclick="goToSlide(3)"></div>
+    </div>
+
+    <div class="oracle-info" style="margin-top:48px;">
       <div>
         <p class="oracle-logline" id="oracle-logline">Un jeune homme fait sa demande en mariage, mais d&#232;s que sa petite amie touche la bague, de myst&#233;rieuses visions l&#8217;envahissent. Ce qu&#8217;elle a vu pourrait tout changer.</p>
         <a href="https://www.imdb.com/title/tt35674375/" class="imdb-link" target="_blank">&#8599; IMDB</a>
       </div>
-      <div class="oracle-meta">
+      <div>
         <div class="oracle-meta-item">
           <p class="oracle-meta-label" id="lbl-genre">Genre</p>
           <p class="oracle-meta-value" id="oracle-genre">Fiction &#183; Fantastique</p>
-        </div>
-        <div class="oracle-meta-item">
-          <p class="oracle-meta-label" id="lbl-role">R&#244;le</p>
-          <p class="oracle-meta-value" id="oracle-role2">R&#233;alisateur &#183; Sc&#233;nariste &#183; Producteur</p>
         </div>
         <div class="oracle-meta-item">
           <p class="oracle-meta-label" id="lbl-status">Statut</p>
@@ -205,24 +211,20 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
     </div>
   </div>
 
-  <!-- BONHOMME DETAIL -->
   <div class="bonhomme-detail">
     <div style="width:100%;height:0.5px;background:rgba(255,255,255,0.05);margin-bottom:64px;"></div>
-    <div class="bonhomme-header">
-      <p class="bonhomme-status" id="bonhomme-status">Court-m&#233;trage &#183; En d&#233;veloppement &#183; Coproduction recherch&#233;e</p>
-      <h3 class="bonhomme-title">Bonhomme</h3>
-      <p class="bonhomme-logline" id="bonhomme-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
-      <div class="project-tags">
-        <span class="tag" id="tag1">Fraternit&#233;</span>
-        <span class="tag" id="tag2">Masculinit&#233;</span>
-        <span class="tag" id="tag3">Drame intimiste</span>
-        <span class="tag" id="tag4">Deuil &#233;motionnel</span>
-      </div>
+    <p class="bonhomme-status" id="bonhomme-status">Court-m&#233;trage &#183; En d&#233;veloppement &#183; Coproduction recherch&#233;e</p>
+    <h3 class="bonhomme-title">Bonhomme</h3>
+    <p class="bonhomme-logline" id="bonhomme-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
+    <div class="project-tags">
+      <span class="tag" id="tag1">Fraternit&#233;</span>
+      <span class="tag" id="tag2">Masculinit&#233;</span>
+      <span class="tag" id="tag3">Drame intimiste</span>
+      <span class="tag" id="tag4">Deuil &#233;motionnel</span>
     </div>
   </div>
 </section>
 
-<!-- A PROPOS -->
 <section id="apropos">
   <div class="section-inner">
     <p class="section-label" id="lbl-apropos">A propos</p>
@@ -255,7 +257,6 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <p class="section-label">Contact</p>
@@ -288,6 +289,24 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.2);text
 </footer>
 
 <script>
+var currentSlide = 0;
+var totalSlides = 4;
+var sliderInterval;
+
+function goToSlide(n) {
+  currentSlide = n;
+  document.getElementById('sliderTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
+  document.querySelectorAll('.dot').forEach(function(d, i) {
+    d.classList.toggle('active', i === n);
+  });
+}
+
+function nextSlide() {
+  goToSlide((currentSlide + 1) % totalSlides);
+}
+
+sliderInterval = setInterval(nextSlide, 3500);
+
 var t = {
   fr: {
     'nav-projets': 'Projets', 'nav-apropos': 'A propos',
