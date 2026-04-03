@@ -398,7 +398,14 @@ function setLang(lang) {
   var strings=t[lang];
   for(var id in strings){var el=document.getElementById(id);if(el)el.textContent=strings[id];}
   document.documentElement.lang=lang;
+  var url = new URL(window.location.href);
+  if(lang === 'en') { url.searchParams.set('lang', 'en'); } else { url.searchParams.delete('lang'); }
+  window.history.replaceState({}, '', url);
 }
+
+// Detect lang from URL on load
+var urlParams = new URLSearchParams(window.location.search);
+if(urlParams.get('lang') === 'en') { setLang('en'); }
 </script>
 </body>
 </html>
