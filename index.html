@@ -10,43 +10,58 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--black);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(245,243,239,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(0,0,0,0.06);}
-.nav-logo{display:flex;align-items:center;text-decoration:none;}
-.nav-logo img{height:52px;width:auto;}
-.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
-.nav-links a{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover{color:var(--black);}
+
+/* NAV CINÉMA */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 48px;background:rgba(245,243,239,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(0,0,0,0.06);}
+.nav-left{display:flex;align-items:center;gap:36px;}
+.nav-right{display:flex;align-items:center;gap:36px;justify-content:flex-end;}
+.nav-center{display:flex;justify-content:center;align-items:center;}
+.nav-logo img{height:96px;width:auto;}
+.nav-links-item{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.2s;}
+.nav-links-item:hover{color:var(--black);}
 .lang-toggle{display:flex;gap:4px;align-items:center;}
 .lang-btn{background:none;border:0.5px solid rgba(0,0,0,0.2);color:var(--gray);font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:0.1em;padding:4px 8px;cursor:pointer;transition:all 0.2s;}
 .lang-btn.active{background:var(--blue);border-color:var(--blue);color:white;}
 .lang-btn:hover:not(.active){border-color:rgba(0,0,0,0.4);color:var(--black);}
+
+/* HERO SLIDESHOW */
+#accueil{position:relative;height:100vh;overflow:hidden;}
+.hero-slider{position:absolute;inset:0;}
+.hero-slider-track{display:flex;height:100%;transition:transform 0.9s ease;}
+.hero-slide{min-width:100%;height:100%;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45);}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 48px;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:24px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;}
+.hero-desc{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.7);max-width:520px;margin-bottom:48px;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:white;text-decoration:none;border-bottom:0.5px solid rgba(255,255,255,0.5);padding-bottom:6px;transition:gap 0.2s;opacity:0;animation:fadeUp 0.8s ease 1s forwards;}
+.hero-cta:hover{gap:20px;}
+.hero-dots{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:background 0.3s;}
+.hero-dot.active{background:white;}
+
+/* SECTIONS */
 section{min-height:100vh;padding:120px 48px 80px;}
 .section-inner{max-width:1000px;margin:0 auto;}
 .section-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px;}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);font-weight:300;line-height:1.1;margin-bottom:48px;color:var(--black);}
-#accueil{display:flex;align-items:center;position:relative;overflow:hidden;background:var(--cream);}
-.hero-inner{max-width:1000px;margin:0 auto;width:100%;}
-.hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue-light);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards;}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,96px);font-weight:300;line-height:1.0;margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;color:var(--black);}
-.hero-title em{font-style:italic;color:var(--blue-light);}
-.hero-desc{font-size:15px;line-height:1.8;color:var(--gray);max-width:520px;margin-bottom:48px;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards;}
-.hero-cta{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:0.5px solid var(--blue);padding-bottom:6px;transition:gap 0.2s,border-color 0.2s;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
-.hero-cta:hover{gap:20px;border-color:var(--blue-light);}
-.hero-bg-text{position:absolute;right:-20px;bottom:60px;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,18vw,220px);font-weight:300;color:rgba(0,51,153,0.04);line-height:1;pointer-events:none;white-space:nowrap;}
+
+/* PROJETS */
 #projets{background:var(--cream2);padding:120px 0 80px;}
 .projets-header{max-width:1000px;margin:0 auto;padding:0 48px;margin-bottom:48px;}
 .films-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
 .film-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:16/9;}
 .film-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
 .film-card:hover img{transform:scale(1.04);}
-.film-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%);transition:background 0.3s;}
-.film-card:hover .film-overlay{background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.4) 60%,rgba(0,0,0,0.1) 100%);}
+.film-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%);}
 .film-info{position:absolute;bottom:0;left:0;right:0;padding:32px;}
 .film-year{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:8px;}
 .film-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:300;color:white;margin-bottom:6px;}
 .film-card-future{background:rgba(0,0,0,0.04);border:0.5px dashed rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;}
 .film-card-future-inner{text-align:center;}
 .film-card-future-inner span{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(0,0,0,0.25);}
+
+/* ORACLE SLIDER */
 .oracle-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
 .slider{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:16px;}
 .slider-track{display:flex;height:100%;transition:transform 0.7s ease;}
@@ -63,12 +78,16 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .oracle-meta-value{font-size:13px;color:var(--gray);}
 .imdb-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);text-decoration:none;border:0.5px solid rgba(0,0,0,0.2);padding:10px 20px;transition:all 0.2s;margin-top:16px;}
 .imdb-link:hover{background:var(--blue);border-color:var(--blue);color:white;}
+
+/* BONHOMME */
 .bonhomme-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
 .bonhomme-status{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:12px;}
 .bonhomme-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;margin-bottom:16px;color:var(--black);}
 .bonhomme-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(10,10,10,0.7);max-width:640px;margin-bottom:32px;}
 .project-tags{display:flex;gap:8px;flex-wrap:wrap;}
 .tag{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(0,0,0,0.15);padding:5px 12px;color:var(--gray);}
+
+/* A PROPOS */
 #apropos{background:var(--cream);}
 .bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:80px;}
 .bio-text{font-size:15px;line-height:1.9;color:rgba(10,10,10,0.65);}
@@ -85,6 +104,8 @@ section{min-height:100vh;padding:120px 48px 80px;}
 .onepager-wrap{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;}
 .dl-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);text-decoration:none;border:0.5px solid rgba(0,0,0,0.2);padding:12px 24px;transition:all 0.2s;}
 .dl-btn:hover{background:var(--blue);border-color:var(--blue);color:white;}
+
+/* CONTACT */
 #contact{background:var(--cream2);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
 .contact-item{margin-bottom:32px;}
@@ -96,33 +117,64 @@ section{min-height:100vh;padding:120px 48px 80px;}
 footer{padding:24px 48px;border-top:0.5px solid rgba(0,0,0,0.08);display:flex;justify-content:space-between;align-items:center;background:var(--cream);}
 footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-transform:uppercase;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:768px){nav{padding:16px 24px;}.nav-links{display:none;}section{padding:100px 24px 60px;}#projets{padding:100px 0 60px;}.projets-header{padding:0 24px;}.films-grid{grid-template-columns:1fr;}.oracle-info,.bio-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}.oracle-detail,.bonhomme-detail{padding:40px 24px 0;}footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}}
+@media(max-width:768px){
+  nav{grid-template-columns:1fr auto;padding:16px 24px;}
+  .nav-left,.nav-right{display:none;}
+  section{padding:100px 24px 60px;}
+  #projets{padding:100px 0 60px;}
+  .projets-header{padding:0 24px;}
+  .films-grid{grid-template-columns:1fr;}
+  .oracle-info,.bio-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .oracle-detail,.bonhomme-detail{padding:40px 24px 0;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+}
 </style>
 </head>
 <body>
+
+<!-- NAV CINÉMA -->
 <nav>
-  <a href="#accueil" class="nav-logo"><img src="logo.png" alt="Humotion Pictures"></a>
-  <ul class="nav-links">
-    <li><a href="#projets" id="nav-projets">Projets</a></li>
-    <li><a href="#apropos" id="nav-apropos">A propos</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('fr')">FR</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <div class="nav-left">
+    <a href="#projets" class="nav-links-item" id="nav-projets">Projets</a>
+    <a href="#apropos" class="nav-links-item" id="nav-apropos">A propos</a>
+  </div>
+  <div class="nav-center">
+    <a href="#accueil" class="nav-logo"><img src="logo.png" alt="Humotion Pictures"></a>
+  </div>
+  <div class="nav-right">
+    <a href="#contact" class="nav-links-item">Contact</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
   </div>
 </nav>
 
-<section id="accueil">
-  <div class="hero-inner">
+<!-- HERO SLIDESHOW -->
+<section id="accueil" style="padding:0;">
+  <div class="hero-slider">
+    <div class="hero-slider-track" id="heroTrack">
+      <div class="hero-slide"><img src="Oracle1.png" alt="Oracle Stone"></div>
+      <div class="hero-slide"><img src="Oracle2.png" alt="Oracle Stone"></div>
+      <div class="hero-slide"><img src="Oracle3.png" alt="Oracle Stone"></div>
+      <div class="hero-slide"><img src="Oracle4.png" alt="Oracle Stone"></div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <p class="hero-eyebrow" id="hero-eyebrow">Production cin&#233;matographique ind&#233;pendante</p>
-    <img src="logo.png" alt="Humotion Pictures" style="width:clamp(280px,45vw,560px);margin:0 auto 40px;display:block;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;">
     <p class="hero-desc" id="hero-desc">Soci&#233;t&#233; de production ind&#233;pendante. Des histoires humaines, ancr&#233;es dans le r&#233;el, port&#233;es par l&#8217;&#233;motion et la sinc&#233;rit&#233;.</p>
     <a href="#projets" class="hero-cta"><span id="hero-cta-text">D&#233;couvrir nos projets</span><span>&#8594;</span></a>
   </div>
-  <div class="hero-bg-text">HP</div>
+  <div class="hero-dots" id="heroDots">
+    <div class="hero-dot active" onclick="goToHeroSlide(0)"></div>
+    <div class="hero-dot" onclick="goToHeroSlide(1)"></div>
+    <div class="hero-dot" onclick="goToHeroSlide(2)"></div>
+    <div class="hero-dot" onclick="goToHeroSlide(3)"></div>
+  </div>
 </section>
 
+<!-- PROJETS -->
 <section id="projets">
   <div class="projets-header">
     <p class="section-label" id="lbl-projets">Projets</p>
@@ -135,7 +187,6 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
       <div class="film-info">
         <p class="film-year">2025</p>
         <h3 class="film-title">Oracle Stone</h3>
-        <p class="film-role" id="oracle-role">R&#233;alisateur &#183; Sc&#233;nariste &#183; Producteur</p>
       </div>
     </div>
     <div class="film-card-future">
@@ -158,7 +209,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
         <div class="slide"><img src="Oracle4.png" alt="Oracle Stone"></div>
       </div>
     </div>
-    <div class="slider-dots" id="sliderDots">
+    <div class="slider-dots">
       <div class="dot active" onclick="goToSlide(0)"></div>
       <div class="dot" onclick="goToSlide(1)"></div>
       <div class="dot" onclick="goToSlide(2)"></div>
@@ -195,11 +246,11 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
   </div>
 </section>
 
+<!-- A PROPOS -->
 <section id="apropos">
   <div class="section-inner">
     <p class="section-label" id="lbl-apropos">A propos</p>
-    <h2 class="section-title" id="title-apropos">Humotion Pictures</h2>
-    <div class="bio-grid">
+    <div class="bio-grid" style="margin-top:48px;">
       <div class="bio-text">
         <p id="bio-p1">Fond&#233;e en 2025 par Michael KIBAMBI, Humotion Pictures est une soci&#233;t&#233; de production ind&#233;pendante bas&#233;e dans les Hauts-de-France. La structure d&#233;veloppe des projets ancr&#233;s dans le r&#233;el, port&#233;s par une attention aux relations humaines et &#224; la v&#233;rit&#233; des situations.</p>
         <p id="bio-p2">Humotion Pictures accompagne des histoires o&#249; l&#8217;intime rejoint l&#8217;universel, avec la performance des acteurs au centre de chaque projet.</p>
@@ -227,6 +278,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <p class="section-label">Contact</p>
@@ -235,7 +287,7 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
       <div>
         <div class="contact-item">
           <p class="contact-label">Email</p>
-          <p class="contact-value"><a href="/cdn-cgi/l/email-protection#4d2e2223392c2e390d25382022392422233d242e39383f283e632b3f"><span class="__cf_email__" data-cfemail="385b57564c595b4c78504d55574c51575648515b4c4d4a5d4b165e4a">[email&#160;protected]</span></a></p>
+          <p class="contact-value"><a href="mailto:contact@humotionpictures.fr">contact@humotionpictures.fr</a></p>
         </div>
         <div class="contact-item">
           <p class="contact-label" id="lbl-structure">Structure</p>
@@ -258,20 +310,26 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
   <span id="footer-rights">Tous droits r&#233;serv&#233;s</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var currentSlide = 0;
-var totalSlides = 4;
+<script>
+// HERO SLIDER
+var heroSlide = 0;
+function goToHeroSlide(n) {
+  heroSlide = n;
+  document.getElementById('heroTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
+  document.querySelectorAll('.hero-dot').forEach(function(d,i){d.classList.toggle('active', i===n);});
+}
+setInterval(function(){ goToHeroSlide((heroSlide + 1) % 4); }, 4000);
 
+// ORACLE SLIDER
+var currentSlide = 0;
 function goToSlide(n) {
   currentSlide = n;
   document.getElementById('sliderTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
-  document.querySelectorAll('.dot').forEach(function(d, i) {
-    d.classList.toggle('active', i === n);
-  });
+  document.querySelectorAll('.dot').forEach(function(d,i){d.classList.toggle('active', i===n);});
 }
+setInterval(function(){ goToSlide((currentSlide + 1) % 4); }, 3500);
 
-setInterval(function() { goToSlide((currentSlide + 1) % totalSlides); }, 3500);
-
+// LANG
 var t = {
   fr: {
     'nav-projets':'Projets','nav-apropos':'A propos',
@@ -279,7 +337,6 @@ var t = {
     'hero-desc':'Soci\u00e9t\u00e9 de production ind\u00e9pendante. Des histoires humaines, ancr\u00e9es dans le r\u00e9el, port\u00e9es par l\u2019\u00e9motion et la sinc\u00e9rit\u00e9.',
     'hero-cta-text':'D\u00e9couvrir nos projets',
     'lbl-projets':'Projets','title-projets':'Filmographie',
-    'oracle-role':'R\u00e9alisateur \u00b7 Sc\u00e9nariste \u00b7 Producteur',
     'bonhomme-soon':'En d\u00e9veloppement',
     'oracle-festival':'Nikon Film Festival \u00b7 2025',
     'oracle-logline':'Un jeune homme fait sa demande en mariage, mais d\u00e8s que sa petite amie touche la bague, de myst\u00e9rieuses visions l\u2019envahissent. Ce qu\u2019elle a vu pourrait tout changer.',
@@ -306,7 +363,6 @@ var t = {
     'hero-desc':'Independent production company. Human stories, rooted in reality, driven by emotion and sincerity.',
     'hero-cta-text':'Explore our projects',
     'lbl-projets':'Projects','title-projets':'Filmography',
-    'oracle-role':'Director \u00b7 Screenwriter \u00b7 Producer',
     'bonhomme-soon':'In development',
     'oracle-festival':'Nikon Film Festival \u00b7 2025',
     'oracle-logline':'A young man proposes to his girlfriend, but as soon as she touches the ring, mysterious visions invade her. What she saw could change everything.',
@@ -332,4 +388,12 @@ var t = {
 function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
   document.querySelectorAll('.lang-btn').forEach(function(b){
-    if(b.getAtt
+    if(b.getAttribute('onclick')==="setLang('"+lang+"')")b.classList.add('active');
+  });
+  var strings=t[lang];
+  for(var id in strings){var el=document.getElementById(id);if(el)el.textContent=strings[id];}
+  document.documentElement.lang=lang;
+}
+</script>
+</body>
+</html>
