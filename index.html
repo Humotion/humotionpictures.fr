@@ -234,31 +234,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
       <h3 class="projet-card-title">Bonhomme</h3>
       <p class="projet-card-type" id="bonhomme-type">En d&#233;veloppement</p>
       <p class="projet-card-status" id="bonhomme-coprod">Coproduction recherch&#233;e</p>
-      <a href="#focus" class="projet-card-link" id="bonhomme-link">En savoir plus &#8594;</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOCUS BONHOMME -->
-<section id="focus" style="background:var(--black);padding:100px 10%;">
-  <div class="focus-inner">
-    <div>
-      <div style="aspect-ratio:16/9;background:#111111;display:flex;flex-direction:column;align-items:center;justify-content:center;border:0.5px solid rgba(255,255,255,0.08);">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,96px);font-weight:300;color:rgba(255,255,255,0.08);letter-spacing:0.1em;">BONHOMME</p>
-        <p style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.15);margin-top:16px;">Visuels à venir</p>
-      </div>
-    </div>
-    <div class="focus-content">
-      <p class="focus-label" id="focus-label">Projet principal</p>
-      <h2 class="focus-title">Bonhomme</h2>
-      <p class="focus-logline" id="focus-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
-      <div class="focus-tags">
-        <span class="focus-tag" id="tag1">Fraternit&#233;</span>
-        <span class="focus-tag" id="tag2">Masculinit&#233;</span>
-        <span class="focus-tag" id="tag3">Drame intimiste</span>
-        <span class="focus-tag" id="tag4">Deuil &#233;motionnel</span>
-      </div>
-      <a href="#contact" class="focus-btn" id="focus-btn">Demander le dossier &#8594;</a>
+      <a href="#contact" class="projet-card-link" id="bonhomme-link">Demander le dossier &#8594;</a>
     </div>
   </div>
 </section>
@@ -266,8 +242,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 <!-- A PROPOS -->
 <section id="apropos">
   <p class="section-label" id="lbl-apropos">A propos</p>
-  <h2 class="section-title" id="title-apropos">Humotion Pictures</h2>
-  <div class="apropos-inner">
+  <div class="apropos-inner" style="margin-top:16px;">
     <div class="apropos-text">
       <p id="bio-p1">Fond&#233;e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind&#233;pendante de d&#233;veloppement et de production cin&#233;matographique. La soci&#233;t&#233; d&#233;fend des r&#233;cits ancr&#233;s dans le r&#233;el, o&#249; l&#8217;intime rejoint l&#8217;universel &#224; travers la justesse du jeu, la densit&#233; des relations humaines et la v&#233;rit&#233; &#233;motionnelle.</p>
       <p id="bio-p2">Chaque projet port&#233; par Humotion Pictures cherche &#224; faire &#233;merger une &#233;motion sinc&#232;re, sans artifice, &#224; partir de situations profond&#233;ment humaines.</p>
@@ -278,7 +253,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 <!-- FONDATEUR -->
 <section id="fondateur">
   <p class="section-label" id="lbl-fondateur">Le fondateur</p>
-  <h2 class="section-title" id="title-fondateur">Le fondateur</h2>
+  <h2 class="section-title" id="title-fondateur">Michael KIBAMBI</h2>
   <div class="fondateur-inner">
     <div class="fondateur-photo">
       <div class="fondateur-photo-placeholder">
@@ -331,7 +306,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
     <div class="cred-item">
       <p class="cred-year" id="cred-year3">En développement</p>
       <p class="cred-title">Bonhomme</p>
-      <p class="cred-desc" id="cred-desc3">Coproduction recherchée — Dossier disponible sur demande</p>
+      <p class="cred-desc" id="cred-desc3">Coproduction recherchée</p><p class="cred-desc" style="margin-top:8px;color:rgba(255,255,255,0.25);">Dossier disponible sur demande</p>
     </div>
   </div>
 </section>
@@ -340,6 +315,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 <section id="contact">
   <p class="section-label">Contact</p>
   <h2 class="section-title" id="title-contact">Travaillons ensemble</h2>
+  <p class="contact-intro" id="contact-intro">Humotion Pictures est ouverte aux discussions autour de la coproduction, du développement de projets, des collaborations artistiques et des opportunités de représentation.</p>
   <div class="contact-tags">
     <span class="contact-tag" id="ctag1">Coproduction</span>
     <span class="contact-tag" id="ctag2">D&#233;veloppement</span>
@@ -434,7 +410,7 @@ var t={
     'lbl-apropos':'A propos','title-apropos':'Humotion Pictures',
     'bio-p1':'Fond\u00e9e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind\u00e9pendante de d\u00e9veloppement et de production cin\u00e9matographique. La soci\u00e9t\u00e9 d\u00e9fend des r\u00e9cits ancr\u00e9s dans le r\u00e9el, o\u00f9 l\u2019intime rejoint l\u2019universel \u00e0 travers la justesse du jeu, la densit\u00e9 des relations humaines et la v\u00e9rit\u00e9 \u00e9motionnelle.',
     'bio-p2':'Chaque projet port\u00e9 par Humotion Pictures cherche \u00e0 faire \u00e9merger une \u00e9motion sinc\u00e8re, sans artifice, \u00e0 partir de situations profond\u00e9ment humaines.',
-    'lbl-fondateur':'Le fondateur','title-fondateur':'Le fondateur',
+    'lbl-fondateur':'Le fondateur','title-fondateur':'Michael KIBAMBI',
     'fondateur-role':'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
     'fondateur-bio':'Form\u00e9 au jeu d\u2019acteur, Michael KIBAMBI d\u00e9veloppe une approche de la r\u00e9alisation profond\u00e9ment ancr\u00e9e dans la performance. Convaincu que l\u2019\u00e9motion juste na\u00eet de la v\u00e9rit\u00e9 des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
     'fondateur-contact-btn':'Contact',
@@ -442,6 +418,7 @@ var t={
     'cred-desc1':'S\u00e9lection officielle avec Oracle Stone',
     'cred-year2':'En d\u00e9veloppement','cred-desc2':'Court-m\u00e9trage en d\u00e9veloppement \u2014 Coproduction recherch\u00e9e',
     'cred-year3':'Sur demande','cred-title3':'Dossier de pr\u00e9sentation','cred-desc3':'Synopsis, note d\u2019intention et budget disponibles sur demande',
+    'contact-intro':'Humotion Pictures est ouverte aux discussions autour de la coproduction, du développement de projets, des collaborations artistiques et des opportunités de représentation.',
     'title-contact':'Travaillons ensemble',
     'ctag1':'Coproduction','ctag2':'D\u00e9veloppement','ctag3':'Collaborations','ctag4':'Repr\u00e9sentation',
     'lbl-structure':'Structure','lbl-based':'Bas\u00e9e dans','location':'Hauts-de-France',
@@ -467,7 +444,7 @@ var t={
     'lbl-apropos':'About','title-apropos':'Humotion Pictures',
     'bio-p1':'Founded in 2025 by Michael KIBAMBI, Humotion Pictures is an independent film development and production company. The company champions stories rooted in reality, where the intimate meets the universal through truthful performance, the depth of human relationships and emotional sincerity.',
     'bio-p2':'Every project carried by Humotion Pictures seeks to bring forth genuine emotion \u2014 unforced, free of artifice \u2014 drawn from deeply human situations.',
-    'lbl-fondateur':'The founder','title-fondateur':'The founder',
+    'lbl-fondateur':'The founder','title-fondateur':'Michael KIBAMBI',
     'fondateur-role':'Founder \u00b7 Actor \u00b7 Director',
     'fondateur-bio':'Trained as an actor, Michael KIBAMBI brings a performance-driven approach to directing. Convinced that genuine emotion comes from the truth of bodies and situations, he founded Humotion Pictures in 2025 to produce human, intimate and universal stories.',
     'fondateur-contact-btn':'Contact',
@@ -475,6 +452,7 @@ var t={
     'cred-desc1':'Official selection with Oracle Stone',
     'cred-year2':'In development','cred-desc2':'Short film in development \u2014 Co-production sought',
     'cred-year3':'On request','cred-title3':'Presentation package','cred-desc3':'Synopsis, director\'s statement and budget available on request',
+    'contact-intro':'Humotion Pictures is open to discussions around co-production, project development, artistic collaborations and representation opportunities.',
     'title-contact':"Let's work together",
     'ctag1':'Co-production','ctag2':'Development','ctag3':'Collaborations','ctag4':'Representation',
     'lbl-structure':'Company','lbl-based':'Based in','location':'Hauts-de-France, France',
