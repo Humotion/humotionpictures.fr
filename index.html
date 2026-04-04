@@ -11,182 +11,186 @@
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--black);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
 
-/* NAV CINÉMA */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 48px;background:rgba(245,243,239,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(0,0,0,0.06);}
-.nav-left{display:flex;align-items:center;gap:36px;}
-.nav-right{display:flex;align-items:center;gap:36px;justify-content:flex-end;}
-.nav-center{display:flex;justify-content:center;align-items:center;}
-.nav-logo img{height:80px;width:auto;}
-.nav-links-item{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.2s;}
-.nav-links-item:hover{color:var(--black);}
-.lang-toggle{display:flex;gap:4px;align-items:center;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(245,243,239,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(0,0,0,0.06);}
+.nav-logo img{height:56px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--black);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.lang-toggle{display:flex;gap:4px;}
 .lang-btn{background:none;border:0.5px solid rgba(0,0,0,0.2);color:var(--gray);font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:0.1em;padding:4px 8px;cursor:pointer;transition:all 0.2s;}
 .lang-btn.active{background:var(--blue);border-color:var(--blue);color:white;}
-.lang-btn:hover:not(.active){border-color:rgba(0,0,0,0.4);color:var(--black);}
 
-/* HERO SLIDESHOW */
+/* HERO */
 #accueil{position:relative;height:100vh;overflow:hidden;}
 .hero-slider{position:absolute;inset:0;}
 .hero-slider-track{display:flex;height:100%;transition:transform 0.9s ease;}
 .hero-slide{min-width:100%;height:100%;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45);}
-.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 48px;}
-.hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:24px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;}
-.hero-desc{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.7);max-width:520px;margin-bottom:48px;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
-.hero-cta{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:white;text-decoration:none;border-bottom:0.5px solid rgba(255,255,255,0.5);padding-bottom:6px;transition:gap 0.2s;opacity:0;animation:fadeUp 0.8s ease 1s forwards;}
-.hero-cta:hover{gap:20px;}
-.hero-dots{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 10%;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:24px;opacity:0;animation:fadeUp 0.8s ease 0.3s forwards;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.2;color:white;max-width:700px;margin-bottom:40px;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards;}
+.hero-btns{display:flex;gap:16px;opacity:0;animation:fadeUp 0.8s ease 0.7s forwards;}
+.btn-primary{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:white;background:var(--blue);border:none;padding:14px 28px;text-decoration:none;transition:background 0.2s;cursor:pointer;}
+.btn-primary:hover{background:var(--blue-light);}
+.btn-secondary{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:white;background:transparent;border:0.5px solid rgba(255,255,255,0.5);padding:14px 28px;text-decoration:none;transition:all 0.2s;}
+.btn-secondary:hover{background:rgba(255,255,255,0.1);}
+.hero-dots{position:absolute;bottom:32px;left:10%;display:flex;gap:8px;}
 .hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:background 0.3s;}
 .hero-dot.active{background:white;}
 
 /* SECTIONS */
-section{min-height:100vh;padding:120px 48px 80px;}
-.section-inner{max-width:1000px;margin:0 auto;}
+section{padding:100px 10%;background:var(--cream);}
 .section-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px;}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);font-weight:300;line-height:1.1;margin-bottom:48px;color:var(--black);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;line-height:1.1;margin-bottom:48px;color:var(--black);}
 
-/* PROJETS */
-#projets{background:var(--cream2);padding:120px 0 80px;}
-.projets-header{max-width:1000px;margin:0 auto;padding:0 48px;margin-bottom:48px;}
-.films-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
-.film-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:16/9;}
-.film-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
-.film-card:hover img{transform:scale(1.04);}
-.film-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%);}
-.film-info{position:absolute;bottom:0;left:0;right:0;padding:32px;}
-.film-year{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:8px;}
-.film-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:300;color:white;margin-bottom:6px;}
-.film-card-future{background:rgba(0,0,0,0.04);border:0.5px dashed rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;}
-.film-card-future-inner{text-align:center;}
-.film-card-future-inner span{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(0,0,0,0.25);}
+/* PROJETS CARDS */
+#projets{background:var(--cream2);}
+.projets-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.projet-card{background:var(--cream);border:0.5px solid rgba(0,0,0,0.08);padding:40px;transition:border-color 0.3s;}
+.projet-card:hover{border-color:rgba(0,51,153,0.3);}
+.projet-card-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:12px;}
+.projet-card-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;margin-bottom:8px;color:var(--black);}
+.projet-card-type{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:24px;}
+.projet-card-status{font-size:12px;color:var(--gray);margin-bottom:8px;}
+.projet-card-status span{color:var(--black);font-weight:400;}
+.projet-card-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue-light);text-decoration:none;margin-top:24px;border-bottom:0.5px solid var(--blue-light);padding-bottom:4px;transition:gap 0.2s;}
+.projet-card-link:hover{gap:14px;}
 
-/* ORACLE SLIDER */
-.oracle-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
-.slider{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:16px;}
-.slider-track{display:flex;height:100%;transition:transform 0.7s ease;}
-.slide{min-width:100%;height:100%;}
-.slide img{width:100%;height:100%;object-fit:cover;}
-.slider-dots{display:flex;justify-content:center;gap:8px;margin-bottom:48px;}
-.dot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,0.15);cursor:pointer;transition:background 0.3s;}
-.dot.active{background:var(--blue-light);}
-.oracle-info{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:64px;}
-.oracle-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(10,10,10,0.7);}
-.oracle-meta-item{padding:12px 0;border-bottom:0.5px solid rgba(0,0,0,0.08);}
-.oracle-meta-item:last-child{border-bottom:none;}
-.oracle-meta-label{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:4px;}
-.oracle-meta-value{font-size:13px;color:var(--gray);}
-.imdb-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);text-decoration:none;border:0.5px solid rgba(0,0,0,0.2);padding:10px 20px;transition:all 0.2s;margin-top:16px;}
-.imdb-link:hover{background:var(--blue);border-color:var(--blue);color:white;}
-
-/* BONHOMME */
-.bonhomme-detail{max-width:1000px;margin:0 auto;padding:64px 48px 0;}
-.bonhomme-status{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:12px;}
-.bonhomme-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;margin-bottom:16px;color:var(--black);}
-.bonhomme-logline{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(10,10,10,0.7);max-width:640px;margin-bottom:32px;}
-.project-tags{display:flex;gap:8px;flex-wrap:wrap;}
-.tag{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(0,0,0,0.15);padding:5px 12px;color:var(--gray);}
+/* FOCUS BONHOMME */
+#focus{background:var(--black);}
+.focus-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.focus-slider{position:relative;aspect-ratio:16/9;overflow:hidden;}
+.focus-slider-track{display:flex;height:100%;transition:transform 0.7s ease;}
+.focus-slide{min-width:100%;height:100%;}
+.focus-slide img{width:100%;height:100%;object-fit:cover;}
+.focus-dots{display:flex;gap:8px;margin-top:16px;}
+.focus-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:background 0.3s;}
+.focus-dot.active{background:rgba(255,255,255,0.8);}
+.focus-content{}
+.focus-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px;}
+.focus-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,72px);font-weight:300;color:white;margin-bottom:24px;}
+.focus-logline{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;line-height:1.7;color:rgba(255,255,255,0.7);margin-bottom:32px;}
+.focus-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
+.focus-tag{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(255,255,255,0.2);padding:5px 12px;color:rgba(255,255,255,0.5);}
+.focus-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:white;text-decoration:none;border:0.5px solid rgba(255,255,255,0.3);padding:12px 24px;transition:all 0.2s;}
+.focus-btn:hover{background:var(--blue);border-color:var(--blue);}
 
 /* A PROPOS */
 #apropos{background:var(--cream);}
-.bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:80px;}
-.bio-text{font-size:15px;line-height:1.9;color:rgba(10,10,10,0.65);}
-.bio-text p{margin-bottom:20px;}
-.bio-credits{padding-left:32px;}
-.bio-credit-item{padding:20px 0;border-bottom:0.5px solid rgba(0,0,0,0.06);}
-.bio-credit-item:last-child{border-bottom:none;}
-.credit-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:4px;color:var(--black);}
-.credit-role{font-size:11px;color:var(--blue-light);letter-spacing:0.08em;margin-bottom:12px;}
-.credit-bio{font-size:13px;line-height:1.7;color:rgba(10,10,10,0.5);}
-.demo-separator{width:40px;height:1px;background:var(--blue);margin-bottom:32px;}
-.video-wrap{position:relative;width:100%;padding-bottom:56.25%;border:0.5px solid rgba(0,0,0,0.1);}
-.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
-.onepager-wrap{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;}
-.dl-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);text-decoration:none;border:0.5px solid rgba(0,0,0,0.2);padding:12px 24px;transition:all 0.2s;}
-.dl-btn:hover{background:var(--blue);border-color:var(--blue);color:white;}
+.apropos-inner{max-width:720px;}
+.apropos-text{font-size:16px;line-height:1.9;color:rgba(10,10,10,0.65);}
+.apropos-text p{margin-bottom:20px;}
+
+/* FONDATEUR */
+#fondateur{background:var(--cream2);}
+.fondateur-inner{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start;}
+.fondateur-photo{aspect-ratio:3/4;background:rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.fondateur-photo img{width:100%;height:100%;object-fit:cover;}
+.fondateur-photo-placeholder{text-align:center;color:rgba(0,0,0,0.2);}
+.fondateur-photo-placeholder p{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px;}
+.fondateur-name{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;margin-bottom:8px;color:var(--black);}
+.fondateur-role{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue-light);margin-bottom:32px;}
+.fondateur-bio{font-size:15px;line-height:1.9;color:rgba(10,10,10,0.65);margin-bottom:32px;}
+.fondateur-links{display:flex;gap:12px;}
+.fondateur-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);text-decoration:none;border:0.5px solid rgba(0,0,0,0.2);padding:10px 20px;transition:all 0.2s;}
+.fondateur-link:hover{background:var(--blue);border-color:var(--blue);color:white;}
+
+/* CREDIBILITE */
+#credibilite{background:var(--black);}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);}
+.cred-item{background:var(--black);padding:40px;border:0.5px solid rgba(255,255,255,0.06);}
+.cred-year{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:12px;}
+.cred-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:white;margin-bottom:8px;}
+.cred-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6;}
 
 /* CONTACT */
 #contact{background:var(--cream2);}
+.contact-intro{font-size:15px;line-height:1.8;color:var(--gray);max-width:600px;margin-bottom:48px;}
+.contact-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:48px;}
+.contact-tag{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(0,0,0,0.15);padding:8px 16px;color:var(--gray);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
-.contact-item{margin-bottom:32px;}
-.contact-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:8px;}
+.contact-info{}
+.contact-item{margin-bottom:28px;}
+.contact-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:6px;}
 .contact-value{font-size:15px;color:var(--black);}
-.contact-value a{color:var(--black);text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.2);transition:border-color 0.2s;}
+.contact-value a{color:var(--black);text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.15);transition:border-color 0.2s;}
 .contact-value a:hover{border-color:var(--blue-light);}
-.contact-note{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;font-weight:300;line-height:1.7;color:rgba(10,10,10,0.4);}
-footer{padding:24px 48px;border-top:0.5px solid rgba(0,0,0,0.08);display:flex;justify-content:space-between;align-items:center;background:var(--cream);}
-footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-transform:uppercase;}
+.contact-form input,.contact-form textarea{width:100%;background:transparent;border:none;border-bottom:0.5px solid rgba(0,0,0,0.2);padding:10px 0;font-family:'Outfit',sans-serif;font-size:14px;color:var(--black);outline:none;margin-bottom:24px;transition:border-color 0.2s;}
+.contact-form input:focus,.contact-form textarea:focus{border-bottom-color:var(--blue-light);}
+.contact-form textarea{resize:none;height:100px;}
+.contact-form label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);display:block;margin-bottom:6px;}
+.submit-btn{display:inline-flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:transparent;border:0.5px solid rgba(0,0,0,0.2);padding:12px 28px;cursor:pointer;transition:all 0.2s;}
+.submit-btn:hover{background:var(--blue);border-color:var(--blue);color:white;}
+
+/* FOOTER */
+footer{background:var(--black);padding:40px 10%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+.footer-left{display:flex;flex-direction:column;gap:6px;}
+.footer-name{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.footer-location{font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;}
+.footer-links{display:flex;gap:20px;align-items:center;}
+.footer-link{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.footer-link:hover{color:rgba(255,255,255,0.7);}
+.footer-copy{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;}
+
+
+/* BURGER MOBILE */
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--black);transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--cream);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu a{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);text-decoration:none;}
+.mobile-menu.open{display:flex;}
+@media(max-width:768px){
+  .burger{display:flex;}
+  .nav-links{display:none;}
+}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
 @media(max-width:768px){
-  /* NAV */
-  nav{grid-template-columns:auto 1fr;padding:14px 20px;gap:0;}
-  .nav-left{display:none;}
-  .nav-right{justify-content:flex-end;gap:12px;}
-  .nav-center{justify-content:flex-start;}
-  .nav-logo img{height:52px;}
-
-  /* HERO */
-  .hero-content{padding:0 24px;}
-  .hero-eyebrow{font-size:9px;}
-  .hero-desc{font-size:13px;margin-bottom:32px;}
-  .hero-cta{font-size:10px;}
-
-  /* SECTIONS */
-  section{padding:80px 20px 60px;}
-  #projets{padding:80px 0 60px;}
-  .projets-header{padding:0 20px;margin-bottom:32px;}
-  .section-title{font-size:clamp(28px,7vw,42px);margin-bottom:32px;}
-
-  /* GRILLE FILMS */
-  .films-grid{grid-template-columns:1fr;}
-  .film-card-future{min-height:160px;}
-
-  /* ORACLE */
-  .oracle-detail{padding:32px 20px 0;}
-  .oracle-info{grid-template-columns:1fr;gap:24px;margin-bottom:40px;}
-  .oracle-logline{font-size:17px;}
-
-  /* BONHOMME */
-  .bonhomme-detail{padding:40px 20px 0;}
-  .bonhomme-title{font-size:clamp(32px,8vw,52px);}
-  .bonhomme-logline{font-size:17px;}
-
-  /* BIO */
-  .bio-grid{grid-template-columns:1fr;gap:32px;margin-bottom:48px;}
-  .bio-credits{padding-left:0;}
-  .bio-text{font-size:14px;}
-
-  /* CONTACT */
-  .contact-grid{grid-template-columns:1fr;gap:32px;}
-  .contact-note{font-size:18px;}
-
-  /* FOOTER */
-  footer{padding:20px 20px;flex-direction:column;gap:8px;text-align:center;}
+  nav{padding:14px 20px;}
+  .nav-links{display:none;}
+  .nav-logo img{height:44px;}
+  section{padding:72px 20px;}
+  .projets-grid{grid-template-columns:1fr;}
+  .focus-inner{grid-template-columns:1fr;gap:40px;}
+  .fondateur-inner{grid-template-columns:1fr;gap:40px;}
+  .fondateur-photo{aspect-ratio:1/1;max-width:200px;}
+  .cred-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;gap:40px;}
+  footer{flex-direction:column;align-items:flex-start;gap:16px;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV CINÉMA -->
+<!-- NAV -->
 <nav>
-  <div class="nav-left">
-    <a href="#projets" class="nav-links-item" id="nav-projets">Projets</a>
-    <a href="#apropos" class="nav-links-item" id="nav-apropos">A propos</a>
-  </div>
-  <div class="nav-center">
-    <a href="#accueil" class="nav-logo"><img src="logo.png" alt="Humotion Pictures"></a>
-  </div>
+  <a href="#accueil"><img src="logo.png" alt="Humotion Pictures" style="height:56px;"></a>
+  <ul class="nav-links">
+    <li><a href="#projets" id="nav-projets">Projets</a></li>
+    <li><a href="#apropos" id="nav-apropos">A propos</a></li>
+    <li><a href="#fondateur" id="nav-fondateur">Fondateur</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
   <div class="nav-right">
-    <a href="#contact" class="nav-links-item">Contact</a>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('fr')">FR</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
   </div>
+  <div class="burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#projets" onclick="toggleMenu()">Projets</a>
+  <a href="#apropos" onclick="toggleMenu()">A propos</a>
+  <a href="#fondateur" onclick="toggleMenu()">Fondateur</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
-<!-- HERO SLIDESHOW -->
+<!-- HERO -->
 <section id="accueil" style="padding:0;">
   <div class="hero-slider">
     <div class="hero-slider-track" id="heroTrack">
@@ -199,8 +203,11 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-eyebrow" id="hero-eyebrow">Production cin&#233;matographique ind&#233;pendante</p>
-    <p class="hero-desc" id="hero-desc">Humotion Pictures d&#233;veloppe des films ancr&#233;s dans le r&#233;el, o&#249; l&#8217;&#233;motion, la performance d&#8217;acteur et la v&#233;rit&#233; des relations humaines occupent une place centrale. Nous d&#233;fendons un cin&#233;ma intime, sinc&#232;re et incarn&#233;, pens&#233; pour faire r&#233;sonner l&#8217;humain au-del&#224; de l&#8217;&#233;cran.</p>
-    <a href="#projets" class="hero-cta"><span id="hero-cta-text">D&#233;couvrir nos projets</span><span>&#8594;</span></a>
+    <h1 class="hero-title" id="hero-title">Humotion Pictures développe des films intimes où le jeu d’acteur, les tensions humaines et la vérité émotionnelle sont au cœur de la mise en scène.</h1>
+    <div class="hero-btns">
+      <a href="#projets" class="btn-primary" id="hero-btn1">D&#233;couvrir les projets</a>
+      <a href="#contact" class="btn-secondary" id="hero-btn2">Nous contacter</a>
+    </div>
   </div>
   <div class="hero-dots" id="heroDots">
     <div class="hero-dot active" onclick="goToHeroSlide(0)"></div>
@@ -212,246 +219,273 @@ footer span{font-size:10px;letter-spacing:0.1em;color:rgba(0,0,0,0.3);text-trans
 
 <!-- PROJETS -->
 <section id="projets">
-  <div class="projets-header">
-    <p class="section-label" id="lbl-projets">Projets</p>
-    <h2 class="section-title" id="title-projets">Filmographie</h2>
-  </div>
-  <div class="films-grid">
-    <div class="film-card">
-      <img src="Oracle1.png" alt="Oracle Stone">
-      <div class="film-overlay"></div>
-      <div class="film-info">
-        <p class="film-year">2025</p>
-        <h3 class="film-title">Oracle Stone</h3>
-      </div>
+  <p class="section-label" id="lbl-projets">Projets</p>
+  <h2 class="section-title" id="title-projets">Nos projets</h2>
+  <div class="projets-grid">
+    <div class="projet-card">
+      <p class="projet-card-label" id="oracle-label">Court-m&#233;trage &#183; Fiction fantastique</p>
+      <h3 class="projet-card-title">Oracle Stone</h3>
+      <p class="projet-card-type">Nikon Film Festival 2025</p>
+      <p class="projet-card-status" id="oracle-status-line"><span id="oracle-status-val">Termin&#233;</span></p>
+      <a href="https://www.imdb.com/title/tt35674375/" target="_blank" class="projet-card-link" id="oracle-link">En savoir plus &#8599;</a>
     </div>
-    <div class="film-card-future">
-      <div class="film-card-future-inner">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(0,0,0,0.15);margin-bottom:12px;">Bonhomme</p>
-        <span id="bonhomme-soon">En d&#233;veloppement</span>
-      </div>
+    <div class="projet-card">
+      <p class="projet-card-label" id="bonhomme-label">Court-m&#233;trage &#183; Drame intimiste</p>
+      <h3 class="projet-card-title">Bonhomme</h3>
+      <p class="projet-card-type" id="bonhomme-type">En d&#233;veloppement</p>
+      <p class="projet-card-status" id="bonhomme-coprod">Coproduction recherch&#233;e</p>
+      <a href="#focus" class="projet-card-link" id="bonhomme-link">En savoir plus &#8594;</a>
     </div>
   </div>
-  <div class="oracle-detail">
-    <div style="margin-bottom:32px;">
-      <p class="section-label" style="margin-bottom:8px;">Oracle Stone</p>
-      <p style="font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray);" id="oracle-festival">Nikon Film Festival &#183; 2025</p>
-    </div>
-    <div class="slider">
-      <div class="slider-track" id="sliderTrack">
-        <div class="slide"><img src="Oracle1.png" alt="Oracle Stone"></div>
-        <div class="slide"><img src="Oracle2.png" alt="Oracle Stone"></div>
-        <div class="slide"><img src="Oracle3.png" alt="Oracle Stone"></div>
-        <div class="slide"><img src="Oracle4.png" alt="Oracle Stone"></div>
+</section>
+
+<!-- FOCUS BONHOMME -->
+<section id="focus" style="background:var(--black);padding:100px 10%;">
+  <div class="focus-inner">
+    <div>
+      <div style="aspect-ratio:16/9;background:#111111;display:flex;flex-direction:column;align-items:center;justify-content:center;border:0.5px solid rgba(255,255,255,0.08);">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,96px);font-weight:300;color:rgba(255,255,255,0.08);letter-spacing:0.1em;">BONHOMME</p>
+        <p style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.15);margin-top:16px;">Visuels à venir</p>
       </div>
     </div>
-    <div class="slider-dots">
-      <div class="dot active" onclick="goToSlide(0)"></div>
-      <div class="dot" onclick="goToSlide(1)"></div>
-      <div class="dot" onclick="goToSlide(2)"></div>
-      <div class="dot" onclick="goToSlide(3)"></div>
-    </div>
-    <div class="oracle-info">
-      <div>
-        <p class="oracle-logline" id="oracle-logline">Un jeune homme fait sa demande en mariage, mais d&#232;s que sa petite amie touche la bague, de myst&#233;rieuses visions l&#8217;envahissent. Ce qu&#8217;elle a vu pourrait tout changer.</p>
-        <a href="https://www.imdb.com/title/tt35674375/" class="imdb-link" target="_blank">&#8599; IMDB</a>
+    <div class="focus-content">
+      <p class="focus-label" id="focus-label">Projet principal</p>
+      <h2 class="focus-title">Bonhomme</h2>
+      <p class="focus-logline" id="focus-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
+      <div class="focus-tags">
+        <span class="focus-tag" id="tag1">Fraternit&#233;</span>
+        <span class="focus-tag" id="tag2">Masculinit&#233;</span>
+        <span class="focus-tag" id="tag3">Drame intimiste</span>
+        <span class="focus-tag" id="tag4">Deuil &#233;motionnel</span>
       </div>
-      <div>
-        <div class="oracle-meta-item">
-          <p class="oracle-meta-label" id="lbl-genre">Genre</p>
-          <p class="oracle-meta-value" id="oracle-genre">Fiction &#183; Fantastique</p>
-        </div>
-        <div class="oracle-meta-item">
-          <p class="oracle-meta-label" id="lbl-status">Statut</p>
-          <p class="oracle-meta-value" id="oracle-status">Termin&#233;</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bonhomme-detail">
-    <div style="width:100%;height:0.5px;background:rgba(0,0,0,0.08);margin-bottom:64px;"></div>
-    <p class="bonhomme-status" id="bonhomme-status">Court-m&#233;trage &#183; En d&#233;veloppement &#183; Coproduction recherch&#233;e</p>
-    <h3 class="bonhomme-title">Bonhomme</h3>
-    <p class="bonhomme-logline" id="bonhomme-logline">Dix mois apr&#232;s avoir sauv&#233; la vie de son fr&#232;re, Daniel attend toujours qu&#8217;il comprenne ce que ce jour-l&#224; a vraiment co&#251;t&#233;.</p>
-    <div class="project-tags">
-      <span class="tag" id="tag1">Fraternit&#233;</span>
-      <span class="tag" id="tag2">Masculinit&#233;</span>
-      <span class="tag" id="tag3">Drame intimiste</span>
-      <span class="tag" id="tag4">Deuil &#233;motionnel</span>
+      <a href="#contact" class="focus-btn" id="focus-btn">Demander le dossier &#8594;</a>
     </div>
   </div>
 </section>
 
 <!-- A PROPOS -->
 <section id="apropos">
-  <div class="section-inner">
-    <p class="section-label" id="lbl-apropos">A propos</p>
-    <div class="bio-grid" style="margin-top:48px;">
-      <div class="bio-text">
-        <p id="bio-p1">Fond&#233;e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind&#233;pendante de d&#233;veloppement et de production cin&#233;matographique. La soci&#233;t&#233; d&#233;fend des r&#233;cits ancr&#233;s dans le r&#233;el, o&#249; l&#8217;intime rejoint l&#8217;universel &#224; travers la justesse du jeu, la densit&#233; des relations humaines et la v&#233;rit&#233; &#233;motionnelle.</p>
-        <p id="bio-p2">Chaque projet port&#233; par Humotion Pictures cherche &#224; faire &#233;merger une &#233;motion sinc&#232;re, sans artifice, &#224; partir de situations profond&#233;ment humaines.</p>
-        <p id="bio-p3">La structure d&#233;veloppe actuellement le court-m&#233;trage Bonhomme et recherche des partenaires de coproduction.</p>
+  <p class="section-label" id="lbl-apropos">A propos</p>
+  <h2 class="section-title" id="title-apropos">Humotion Pictures</h2>
+  <div class="apropos-inner">
+    <div class="apropos-text">
+      <p id="bio-p1">Fond&#233;e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind&#233;pendante de d&#233;veloppement et de production cin&#233;matographique. La soci&#233;t&#233; d&#233;fend des r&#233;cits ancr&#233;s dans le r&#233;el, o&#249; l&#8217;intime rejoint l&#8217;universel &#224; travers la justesse du jeu, la densit&#233; des relations humaines et la v&#233;rit&#233; &#233;motionnelle.</p>
+      <p id="bio-p2">Chaque projet port&#233; par Humotion Pictures cherche &#224; faire &#233;merger une &#233;motion sinc&#232;re, sans artifice, &#224; partir de situations profond&#233;ment humaines.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FONDATEUR -->
+<section id="fondateur">
+  <p class="section-label" id="lbl-fondateur">Le fondateur</p>
+  <h2 class="section-title" id="title-fondateur">Le fondateur</h2>
+  <div class="fondateur-inner">
+    <div class="fondateur-photo">
+      <div class="fondateur-photo-placeholder">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="10" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/><path d="M4 44c0-11 9-20 20-20s20 9 20 20" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/></svg>
+        <p>Photo &#224; venir</p>
       </div>
-      <div class="bio-credits">
-        <p class="section-label" id="lbl-exp" style="margin-bottom:24px;">Equipe</p>
-        <div class="bio-credit-item">
-          <p class="credit-name">Michael KIBAMBI</p>
-          <p class="credit-role" id="role-label1">Fondateur &#183; Acteur &#183; R&#233;alisateur</p>
-          <p class="credit-bio" id="credit-bio1">Form&#233; au jeu d&#8217;acteur, Michael KIBAMBI d&#233;veloppe une approche de la r&#233;alisation profond&#233;ment ancr&#233;e dans la performance. Convaincu que l&#8217;&#233;motion juste na&#238;t de la v&#233;rit&#233; des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.</p>
-          <a href="https://www.imdb.com/name/nm15184615/" target="_blank" class="imdb-link" style="margin-top:16px;">&#8599; IMDB</a>
-        </div>
+    </div>
+    <div>
+      <h3 class="fondateur-name">Michael KIBAMBI</h3>
+      <p class="fondateur-role" id="fondateur-role">Fondateur &#183; Acteur &#183; R&#233;alisateur</p>
+      <p class="fondateur-bio" id="fondateur-bio">Form&#233; au jeu d&#8217;acteur, Michael KIBAMBI d&#233;veloppe une approche de la r&#233;alisation profond&#233;ment ancr&#233;e dans la performance. Convaincu que l&#8217;&#233;motion juste na&#238;t de la v&#233;rit&#233; des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.</p>
+      <div class="fondateur-links">
+        <a href="https://www.imdb.com/name/nm15184615/" target="_blank" class="fondateur-link">&#8599; IMDb</a>
+        <a href="#contact" class="fondateur-link" id="fondateur-contact-btn">Contact</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITE -->
+<section id="credibilite" style="background:var(--black);padding:100px 10%;">
+  <p class="section-label" id="lbl-cred">Sélections &amp; Références</p>
+  <h2 class="section-title" style="color:white;" id="title-cred">Parcours</h2>
+  <div class="cred-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="cred-item">
+      <p class="cred-year">Sélection officielle</p>
+      <p class="cred-title">Grifo Festival</p>
+      <p class="cred-desc">Oracle Stone</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-year">Sélection officielle</p>
+      <p class="cred-title">Festival Cinéma Plan d'Ensemble</p>
+      <p class="cred-desc">Oracle Stone</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-year">Sélection officielle</p>
+      <p class="cred-title">First-Time Sessions Vol. 3</p>
+      <p class="cred-desc">Oracle Stone</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-year">Nomination</p>
+      <p class="cred-title">AltFF Alternative Film Festival</p>
+      <p class="cred-desc">Oracle Stone</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-year">Nomination</p>
+      <p class="cred-title">Couch Film Festival</p>
+      <p class="cred-desc">Oracle Stone</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-year" id="cred-year3">En développement</p>
+      <p class="cred-title">Bonhomme</p>
+      <p class="cred-desc" id="cred-desc3">Coproduction recherchée — Dossier disponible sur demande</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title" id="title-contact">Travaillons ensemble</h2>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-item">
-          <p class="contact-label">Email</p>
-          <p class="contact-value"><a id="contact-email" href="#"></a></p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-label" id="lbl-structure">Structure</p>
-          <p class="contact-value">Humotion Pictures</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-label" id="lbl-based">Bas&#233; dans</p>
-          <p class="contact-value" id="location">Hauts-de-France</p>
-        </div>
+  <p class="section-label">Contact</p>
+  <h2 class="section-title" id="title-contact">Travaillons ensemble</h2>
+  <div class="contact-tags">
+    <span class="contact-tag" id="ctag1">Coproduction</span>
+    <span class="contact-tag" id="ctag2">D&#233;veloppement</span>
+    <span class="contact-tag" id="ctag3">Collaborations</span>
+    <span class="contact-tag" id="ctag4">Repr&#233;sentation</span>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <p class="contact-label">Email</p>
+        <p class="contact-value"><a id="contact-email" href="#"><span class="__cf_email__" data-cfemail="4d2e2223392c2e390d25382022392422233d242e39383f283e632b3f">[email&#160;protected]</span></a></p>
       </div>
-      <div>
-        <p class="contact-note" id="contact-note">Humotion Pictures est ouverte aux discussions autour de la coproduction, du d&#233;veloppement de projets, des collaborations artistiques et des opportunit&#233;s de repr&#233;sentation. Pour toute prise de contact, utilisez le formulaire ci-dessous ou contactez-nous directement.</p>
-        <div class="contact-item" style="margin-top:32px;">
-          <p class="contact-label" id="contact-projet-label">Projet actuellement en d&#233;veloppement</p>
-          <p class="contact-value" id="contact-projet-value">Bonhomme &#8212; Dossier de pr&#233;sentation disponible sur demande.</p>
-        </div>
-        <form action="https://formspree.io/f/mpqojvyp" method="POST" style="margin-top:40px;">
-          <div style="margin-bottom:20px;">
-            <label style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);display:block;margin-bottom:8px;" id="lbl-form-name">Nom</label>
-            <input type="text" name="nom" required style="width:100%;background:transparent;border:none;border-bottom:0.5px solid rgba(0,0,0,0.2);padding:8px 0;font-family:'Outfit',sans-serif;font-size:14px;color:var(--black);outline:none;" onfocus="this.style.borderBottomColor='var(--blue-light)'" onblur="this.style.borderBottomColor='rgba(0,0,0,0.2)'">
-          </div>
-          <div style="margin-bottom:20px;">
-            <label style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);display:block;margin-bottom:8px;">Email</label>
-            <input type="email" name="email" required style="width:100%;background:transparent;border:none;border-bottom:0.5px solid rgba(0,0,0,0.2);padding:8px 0;font-family:'Outfit',sans-serif;font-size:14px;color:var(--black);outline:none;" onfocus="this.style.borderBottomColor='var(--blue-light)'" onblur="this.style.borderBottomColor='rgba(0,0,0,0.2)'">
-          </div>
-          <div style="margin-bottom:32px;">
-            <label style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);display:block;margin-bottom:8px;" id="lbl-form-message">Message</label>
-            <textarea name="message" required rows="4" style="width:100%;background:transparent;border:none;border-bottom:0.5px solid rgba(0,0,0,0.2);padding:8px 0;font-family:'Outfit',sans-serif;font-size:14px;color:var(--black);outline:none;resize:none;" onfocus="this.style.borderBottomColor='var(--blue-light)'" onblur="this.style.borderBottomColor='rgba(0,0,0,0.2)'"></textarea>
-          </div>
-          <button type="submit" id="btn-submit" style="display:inline-flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:transparent;border:0.5px solid rgba(0,0,0,0.2);padding:12px 24px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.background='var(--blue)';this.style.color='white';this.style.borderColor='var(--blue)'" onmouseout="this.style.background='transparent';this.style.color='var(--black)';this.style.borderColor='rgba(0,0,0,0.2)'">Envoyer &#8594;</button>
-        </form>
+      <div class="contact-item">
+        <p class="contact-label" id="lbl-structure">Structure</p>
+        <p class="contact-value">Humotion Pictures</p>
       </div>
+      <div class="contact-item">
+        <p class="contact-label" id="lbl-based">Bas&#233;e dans</p>
+        <p class="contact-value" id="location">Hauts-de-France</p>
+      </div>
+      <div class="contact-item">
+        <p class="contact-label" id="lbl-projet">Projet en d&#233;veloppement</p>
+        <p class="contact-value" id="contact-projet">Bonhomme &#8212; Dossier disponible sur demande</p>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/mpqojvyp" method="POST">
+        <div>
+          <label id="lbl-form-name">Nom</label>
+          <input type="text" name="nom" required>
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div>
+          <label id="lbl-form-message">Message</label>
+          <textarea name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="btn-submit">Envoyer &#8594;</button>
+      </form>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <span>&#169; 2026 Humotion Pictures</span>
-  <span id="footer-rights">Tous droits r&#233;serv&#233;s</span>
+  <div class="footer-left">
+    <span class="footer-name">Humotion Pictures</span>
+    <span class="footer-tagline" style="font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.1em;text-transform:uppercase;">Films ancrés dans le réel</span>
+    <span class="footer-location" id="footer-location">Hauts-de-France &#183; France</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.imdb.com/name/nm15184615/" target="_blank" class="footer-link">IMDb</a>
+    <a href="https://www.instagram.com/humotionpictures" target="_blank" class="footer-link">Instagram</a>
+    <a href="#" class="footer-link" id="footer-mentions">Mentions l&#233;gales</a>
+  </div>
+  <span class="footer-copy">&#169; 2026 Humotion Pictures</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // HERO SLIDER
-var heroSlide = 0;
-function goToHeroSlide(n) {
-  heroSlide = n;
-  document.getElementById('heroTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
-  document.querySelectorAll('.hero-dot').forEach(function(d,i){d.classList.toggle('active', i===n);});
-}
-setInterval(function(){ goToHeroSlide((heroSlide + 1) % 4); }, 4000);
+var heroSlide=0;
+function goToHeroSlide(n){heroSlide=n;document.getElementById('heroTrack').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.hero-dot').forEach(function(d,i){d.classList.toggle('active',i===n);});}
+setInterval(function(){goToHeroSlide((heroSlide+1)%4);},4500);
 
-// ORACLE SLIDER
-var currentSlide = 0;
-function goToSlide(n) {
-  currentSlide = n;
-  document.getElementById('sliderTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
-  document.querySelectorAll('.dot').forEach(function(d,i){d.classList.toggle('active', i===n);});
-}
-setInterval(function(){ goToSlide((currentSlide + 1) % 4); }, 3500);
+// FOCUS SLIDER
+var focusSlide=0;
+function goToFocusSlide(n){focusSlide=n;document.getElementById('focusTrack').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.focus-dot').forEach(function(d,i){d.classList.toggle('active',i===n);});}
+setInterval(function(){goToFocusSlide((focusSlide+1)%4);},3500);
+
+// EMAIL
+var u='contact';var d='humotionpictures.fr';var el=document.getElementById('contact-email');if(el){el.href='mailto:'+u+'@'+d;el.textContent=u+'@'+d;}
 
 // LANG
-var t = {
-  fr: {
-    'nav-projets':'Projets','nav-apropos':'A propos',
+var t={
+  fr:{
+    'nav-projets':'Projets','nav-apropos':'A propos','nav-fondateur':'Fondateur',
     'hero-eyebrow':'Production cin\u00e9matographique ind\u00e9pendante',
-    'hero-desc':'Humotion Pictures d\u00e9veloppe des films ancr\u00e9s dans le r\u00e9el, o\u00f9 l\u2019\u00e9motion, la performance d\u2019acteur et la v\u00e9rit\u00e9 des relations humaines occupent une place centrale. Nous d\u00e9fendons un cin\u00e9ma intime, sinc\u00e8re et incarn\u00e9, pens\u00e9 pour faire r\u00e9sonner l\u2019humain au-del\u00e0 de l\u2019\u00e9cran.',
-    'hero-cta-text':'D\u00e9couvrir nos projets',
-    'lbl-projets':'Projets','title-projets':'Filmographie',
-    'bonhomme-soon':'En d\u00e9veloppement',
-    'oracle-festival':'Nikon Film Festival \u00b7 2025',
-    'oracle-logline':'Un jeune homme fait sa demande en mariage, mais d\u00e8s que sa petite amie touche la bague, de myst\u00e9rieuses visions l\u2019envahissent. Ce qu\u2019elle a vu pourrait tout changer.',
-    'lbl-genre':'Genre','oracle-genre':'Fiction \u00b7 Fantastique',
-    'lbl-status':'Statut','oracle-status':'Termin\u00e9',
-    'bonhomme-status':'Court-m\u00e9trage \u00b7 En d\u00e9veloppement \u00b7 Coproduction recherch\u00e9e',
-    'bonhomme-logline':'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
+    'hero-title':'Humotion Pictures d\u00e9veloppe des films ancr\u00e9s dans le r\u00e9el, port\u00e9s par l\u2019\u00e9motion, la performance d\u2019acteur et la v\u00e9rit\u00e9 des relations humaines.',
+    'hero-btn1':'D\u00e9couvrir les projets','hero-btn2':'Nous contacter',
+    'lbl-projets':'Projets','title-projets':'Nos projets',
+    'oracle-label':'Court-m\u00e9trage \u00b7 Fiction fantastique',
+    'oracle-status-val':'Termin\u00e9','oracle-link':'En savoir plus \u2199',
+    'bonhomme-label':'Court-m\u00e9trage \u00b7 Drame intimiste',
+    'bonhomme-type':'En d\u00e9veloppement','bonhomme-coprod':'Coproduction recherch\u00e9e',
+    'bonhomme-link':'En savoir plus \u2192',
+    'focus-label':'Projet principal',
+    'focus-logline':'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
     'tag1':'Fraternit\u00e9','tag2':'Masculinit\u00e9','tag3':'Drame intimiste','tag4':'Deuil \u00e9motionnel',
+    'focus-btn':'Demander le dossier \u2192',
     'lbl-apropos':'A propos','title-apropos':'Humotion Pictures',
     'bio-p1':'Fond\u00e9e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind\u00e9pendante de d\u00e9veloppement et de production cin\u00e9matographique. La soci\u00e9t\u00e9 d\u00e9fend des r\u00e9cits ancr\u00e9s dans le r\u00e9el, o\u00f9 l\u2019intime rejoint l\u2019universel \u00e0 travers la justesse du jeu, la densit\u00e9 des relations humaines et la v\u00e9rit\u00e9 \u00e9motionnelle.',
     'bio-p2':'Chaque projet port\u00e9 par Humotion Pictures cherche \u00e0 faire \u00e9merger une \u00e9motion sinc\u00e8re, sans artifice, \u00e0 partir de situations profond\u00e9ment humaines.',
-    'bio-p3':'La structure d\u00e9veloppe actuellement le court-m\u00e9trage Bonhomme et recherche des partenaires de coproduction.',
-    'lbl-exp':'Equipe','role-label1':'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
-    'credit-bio1':'Form\u00e9 au jeu d\u2019acteur, Michael KIBAMBI d\u00e9veloppe une approche de la r\u00e9alisation profond\u00e9ment ancr\u00e9e dans la performance. Convaincu que l\u2019\u00e9motion juste na\u00eet de la v\u00e9rit\u00e9 des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
-    'lbl-demo':'Bande d\u00e9mo','title-demo':'Voir le travail',
-    'title-contact':'Travaillons ensemble','lbl-structure':'Structure',
-    'lbl-based':'Bas\u00e9e dans','location':'Hauts-de-France',
-    'contact-note':'Humotion Pictures est ouverte aux discussions autour de la coproduction, du d\u00e9veloppement de projets, des collaborations artistiques et des opportunit\u00e9s de repr\u00e9sentation. Pour toute prise de contact, utilisez le formulaire ci-dessous ou contactez-nous directement.',
-    'contact-projet-label':'Projet actuellement en d\u00e9veloppement',
-    'contact-projet-value':'Bonhomme \u2014 Dossier de pr\u00e9sentation disponible sur demande.',
-    'footer-rights':'Tous droits r\u00e9serv\u00e9s'
+    'lbl-fondateur':'Le fondateur','title-fondateur':'Le fondateur',
+    'fondateur-role':'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
+    'fondateur-bio':'Form\u00e9 au jeu d\u2019acteur, Michael KIBAMBI d\u00e9veloppe une approche de la r\u00e9alisation profond\u00e9ment ancr\u00e9e dans la performance. Convaincu que l\u2019\u00e9motion juste na\u00eet de la v\u00e9rit\u00e9 des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
+    'fondateur-contact-btn':'Contact',
+    'lbl-cred':'S\u00e9lections & R\u00e9f\u00e9rences','title-cred':'Parcours',
+    'cred-desc1':'S\u00e9lection officielle avec Oracle Stone',
+    'cred-year2':'En d\u00e9veloppement','cred-desc2':'Court-m\u00e9trage en d\u00e9veloppement \u2014 Coproduction recherch\u00e9e',
+    'cred-year3':'Sur demande','cred-title3':'Dossier de pr\u00e9sentation','cred-desc3':'Synopsis, note d\u2019intention et budget disponibles sur demande',
+    'title-contact':'Travaillons ensemble',
+    'ctag1':'Coproduction','ctag2':'D\u00e9veloppement','ctag3':'Collaborations','ctag4':'Repr\u00e9sentation',
+    'lbl-structure':'Structure','lbl-based':'Bas\u00e9e dans','location':'Hauts-de-France',
+    'lbl-projet':'Projet en d\u00e9veloppement','contact-projet':'Bonhomme \u2014 Dossier disponible sur demande',
+    'lbl-form-name':'Nom','lbl-form-message':'Message','btn-submit':'Envoyer \u2192',
+    'footer-location':'Hauts-de-France \u00b7 France','footer-mentions':'Mentions l\u00e9gales'
   },
-  en: {
-    'nav-projets':'Projects','nav-apropos':'About',
+  en:{
+    'nav-projets':'Projects','nav-apropos':'About','nav-fondateur':'Founder',
     'hero-eyebrow':'Independent film production',
-    'hero-desc':'Humotion Pictures develops films rooted in reality, where emotion, performance and the truth of human relationships take centre stage. We champion intimate, sincere and embodied cinema — made to resonate beyond the screen.',
-    'hero-cta-text':'Explore our projects',
-    'lbl-projets':'Projects','title-projets':'Filmography',
-    'bonhomme-soon':'In development',
-    'oracle-festival':'Nikon Film Festival \u00b7 2025',
-    'oracle-logline':'A young man proposes to his girlfriend, but as soon as she touches the ring, mysterious visions invade her. What she saw could change everything.',
-    'lbl-genre':'Genre','oracle-genre':'Fiction \u00b7 Fantasy',
-    'lbl-status':'Status','oracle-status':'Completed',
-    'bonhomme-status':'Short film \u00b7 In development \u00b7 Co-production sought',
-    'bonhomme-logline':'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
+    'hero-title':'Humotion Pictures develops intimate films where performance, human tensions and emotional truth are at the heart of the work.',
+    'hero-btn1':'Explore our projects','hero-btn2':'Contact us',
+    'lbl-projets':'Projects','title-projets':'Our projects',
+    'oracle-label':'Short film \u00b7 Fantasy fiction',
+    'oracle-status-val':'Completed','oracle-link':'Learn more \u2199',
+    'bonhomme-label':'Short film \u00b7 Intimate drama',
+    'bonhomme-type':'In development','bonhomme-coprod':'Co-production sought',
+    'bonhomme-link':'Learn more \u2192',
+    'focus-label':'Main project',
+    'focus-logline':'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
     'tag1':'Brotherhood','tag2':'Masculinity','tag3':'Intimate drama','tag4':'Emotional grief',
+    'focus-btn':'Request the dossier \u2192',
     'lbl-apropos':'About','title-apropos':'Humotion Pictures',
     'bio-p1':'Founded in 2025 by Michael KIBAMBI, Humotion Pictures is an independent film development and production company. The company champions stories rooted in reality, where the intimate meets the universal through truthful performance, the depth of human relationships and emotional sincerity.',
     'bio-p2':'Every project carried by Humotion Pictures seeks to bring forth genuine emotion \u2014 unforced, free of artifice \u2014 drawn from deeply human situations.',
-    'bio-p3':'The company is currently developing the short film Bonhomme and is seeking co-production partners.',
-    'lbl-exp':'Team','role-label1':'Founder \u00b7 Actor \u00b7 Director',
-    'credit-bio1':'Trained as an actor, Michael KIBAMBI brings a performance-driven approach to directing. Convinced that genuine emotion comes from the truth of bodies and situations, he founded Humotion Pictures in 2025 to produce human, intimate and universal stories.',
-    'lbl-demo':'Demo reel','title-demo':'Watch the work',
-    'title-contact':"Let's work together",'lbl-structure':'Company',
-    'lbl-based':'Based in','location':'Hauts-de-France, France',
-    'contact-note':'Humotion Pictures is open to discussions around co-production, project development, artistic collaborations and representation opportunities. To get in touch, use the form below or contact us directly.',
-    'contact-projet-label':'Project currently in development',
-    'contact-projet-value':'Bonhomme \u2014 Presentation package available on request.',
-    'footer-rights':'All rights reserved'
+    'lbl-fondateur':'The founder','title-fondateur':'The founder',
+    'fondateur-role':'Founder \u00b7 Actor \u00b7 Director',
+    'fondateur-bio':'Trained as an actor, Michael KIBAMBI brings a performance-driven approach to directing. Convinced that genuine emotion comes from the truth of bodies and situations, he founded Humotion Pictures in 2025 to produce human, intimate and universal stories.',
+    'fondateur-contact-btn':'Contact',
+    'lbl-cred':'Selections & References','title-cred':'Track record',
+    'cred-desc1':'Official selection with Oracle Stone',
+    'cred-year2':'In development','cred-desc2':'Short film in development \u2014 Co-production sought',
+    'cred-year3':'On request','cred-title3':'Presentation package','cred-desc3':'Synopsis, director\'s statement and budget available on request',
+    'title-contact':"Let's work together",
+    'ctag1':'Co-production','ctag2':'Development','ctag3':'Collaborations','ctag4':'Representation',
+    'lbl-structure':'Company','lbl-based':'Based in','location':'Hauts-de-France, France',
+    'lbl-projet':'Project in development','contact-projet':'Bonhomme \u2014 Dossier available on request',
+    'lbl-form-name':'Name','lbl-form-message':'Message','btn-submit':'Send \u2192',
+    'footer-location':'Hauts-de-France \u00b7 France','footer-mentions':'Legal notice'
   }
 };
 
-function setLang(lang) {
+function setLang(lang){
   document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
-  document.querySelectorAll('.lang-btn').forEach(function(b){
-    if(b.getAttribute('onclick')==="setLang('"+lang+"')")b.classList.add('active');
-  });
+  document.querySelectorAll('.lang-btn').forEach(function(b){if(b.getAttribute('onclick')==="setLang('"+lang+"')")b.classList.add('active');});
   var strings=t[lang];
-  for(var id in strings){var el=document.getElementById(id);if(el)el.textContent=strings[id];}
-  document.documentElement.lang=lang;
-  var url = new URL(window.location.href);
-  if(lang === 'en') { url.searchParams.set('lang', 'en'); } else { url.searchParams.delete('lang'); }
-  window.history.replaceState({}, '', url);
-}
-
-// EMAIL
-var u='contact';var d='humotionpictures.fr';var el=document.getElementById('contact-email');el.href='mailto:'+u+'@'+d;el.textContent=u+'@'+d;
-var urlParams = new URLSearchParams(window.location.search);
-if(urlParams.get('lang') === 'en') { setLang('en'); }
-</script>
-</body>
-</html>
+  for(var id in strings){va
