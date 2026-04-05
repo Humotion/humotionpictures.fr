@@ -29,15 +29,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-slide{min-width:100%;height:100%;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
 .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);}
-.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 10%;}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 10% 0;text-align:center;}
 .hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:24px;opacity:0;animation:fadeUp 0.8s ease 0.3s forwards;}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.2;color:white;max-width:700px;margin-bottom:40px;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards;}
-.hero-btns{display:flex;gap:16px;opacity:0;animation:fadeUp 0.8s ease 0.7s forwards;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.8vw,52px);font-weight:300;line-height:1.2;color:white;max-width:800px;margin-bottom:40px;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards;}
+.hero-btns{display:flex;gap:16px;justify-content:center;opacity:0;animation:fadeUp 0.8s ease 0.7s forwards;}
 .btn-primary{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:white;background:var(--blue);border:none;padding:14px 28px;text-decoration:none;transition:background 0.2s;cursor:pointer;}
 .btn-primary:hover{background:var(--blue-light);}
 .btn-secondary{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:white;background:transparent;border:0.5px solid rgba(255,255,255,0.5);padding:14px 28px;text-decoration:none;transition:all 0.2s;}
 .btn-secondary:hover{background:rgba(255,255,255,0.1);}
-.hero-dots{position:absolute;bottom:32px;left:10%;display:flex;gap:8px;}
+.hero-dots{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;}
 .hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:background 0.3s;}
 .hero-dot.active{background:white;}
 
@@ -59,24 +59,7 @@ section{padding:100px 10%;background:var(--cream);}
 .projet-card-link{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue-light);text-decoration:none;margin-top:24px;border-bottom:0.5px solid var(--blue-light);padding-bottom:4px;transition:gap 0.2s;}
 .projet-card-link:hover{gap:14px;}
 
-/* FOCUS BONHOMME */
-#focus{background:var(--black);}
-.focus-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.focus-slider{position:relative;aspect-ratio:16/9;overflow:hidden;}
-.focus-slider-track{display:flex;height:100%;transition:transform 0.7s ease;}
-.focus-slide{min-width:100%;height:100%;}
-.focus-slide img{width:100%;height:100%;object-fit:cover;}
-.focus-dots{display:flex;gap:8px;margin-top:16px;}
-.focus-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:background 0.3s;}
-.focus-dot.active{background:rgba(255,255,255,0.8);}
-.focus-content{}
-.focus-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px;}
-.focus-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,72px);font-weight:300;color:white;margin-bottom:24px;}
-.focus-logline{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;line-height:1.7;color:rgba(255,255,255,0.7);margin-bottom:32px;}
-.focus-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
-.focus-tag{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(255,255,255,0.2);padding:5px 12px;color:rgba(255,255,255,0.5);}
-.focus-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:white;text-decoration:none;border:0.5px solid rgba(255,255,255,0.3);padding:12px 24px;transition:all 0.2s;}
-.focus-btn:hover{background:var(--blue);border-color:var(--blue);}
+
 
 /* A PROPOS */
 #apropos{background:var(--cream);}
@@ -86,12 +69,12 @@ section{padding:100px 10%;background:var(--cream);}
 
 /* FONDATEUR */
 #fondateur{background:var(--cream2);}
-.fondateur-inner{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start;}
-.fondateur-photo{aspect-ratio:3/4;background:rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.fondateur-photo img{width:100%;height:100%;object-fit:cover;}
-.fondateur-photo-placeholder{text-align:center;color:rgba(0,0,0,0.2);}
-.fondateur-photo-placeholder p{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px;}
-.fondateur-name{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;margin-bottom:8px;color:var(--black);}
+.fondateur-inner{display:block;max-width:720px;}
+
+
+
+
+
 .fondateur-role{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue-light);margin-bottom:32px;}
 .fondateur-bio{font-size:15px;line-height:1.9;color:rgba(10,10,10,0.65);margin-bottom:32px;}
 .fondateur-links{display:flex;gap:12px;}
@@ -155,9 +138,8 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
   .nav-logo img{height:44px;}
   section{padding:72px 20px;}
   .projets-grid{grid-template-columns:1fr;}
-  .focus-inner{grid-template-columns:1fr;gap:40px;}
   .fondateur-inner{grid-template-columns:1fr;gap:40px;}
-  .fondateur-photo{aspect-ratio:1/1;max-width:200px;}
+
   .cred-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;gap:40px;}
   footer{flex-direction:column;align-items:flex-start;gap:16px;}
@@ -171,7 +153,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
   <a href="#accueil"><img src="logo.png" alt="Humotion Pictures" style="height:56px;"></a>
   <ul class="nav-links">
     <li><a href="#projets" id="nav-projets">Projets</a></li>
-    <li><a href="#apropos" id="nav-apropos">A propos</a></li>
+    <li><a href="#apropos" id="nav-apropos">À propos</a></li>
     <li><a href="#fondateur" id="nav-fondateur">Fondateur</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -185,7 +167,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#projets" onclick="toggleMenu()">Projets</a>
-  <a href="#apropos" onclick="toggleMenu()">A propos</a>
+  <a href="#apropos" onclick="toggleMenu()">À propos</a>
   <a href="#fondateur" onclick="toggleMenu()">Fondateur</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
@@ -241,7 +223,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 
 <!-- A PROPOS -->
 <section id="apropos">
-  <p class="section-label" id="lbl-apropos">A propos</p>
+  <p class="section-label" id="lbl-apropos">À propos</p>
   <div class="apropos-inner" style="margin-top:16px;">
     <div class="apropos-text">
       <p id="bio-p1">Fond&#233;e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind&#233;pendante de d&#233;veloppement et de production cin&#233;matographique. La soci&#233;t&#233; d&#233;fend des r&#233;cits ancr&#233;s dans le r&#233;el, o&#249; l&#8217;intime rejoint l&#8217;universel &#224; travers la justesse du jeu, la densit&#233; des relations humaines et la v&#233;rit&#233; &#233;motionnelle.</p>
@@ -255,14 +237,8 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
   <p class="section-label" id="lbl-fondateur">Le fondateur</p>
   <h2 class="section-title" id="title-fondateur">Michael KIBAMBI</h2>
   <div class="fondateur-inner">
-    <div class="fondateur-photo">
-      <div class="fondateur-photo-placeholder">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="10" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/><path d="M4 44c0-11 9-20 20-20s20 9 20 20" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/></svg>
-        <p>Photo &#224; venir</p>
-      </div>
     </div>
     <div>
-      <h3 class="fondateur-name">Michael KIBAMBI</h3>
       <p class="fondateur-role" id="fondateur-role">Fondateur &#183; Acteur &#183; R&#233;alisateur</p>
       <p class="fondateur-bio" id="fondateur-bio">Form&#233; au jeu d&#8217;acteur, Michael KIBAMBI d&#233;veloppe une approche de la r&#233;alisation profond&#233;ment ancr&#233;e dans la performance. Convaincu que l&#8217;&#233;motion juste na&#238;t de la v&#233;rit&#233; des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.</p>
       <div class="fondateur-links">
@@ -369,101 +345,173 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
     <span class="footer-location" id="footer-location">Hauts-de-France &#183; France</span>
   </div>
   <div class="footer-links">
-    <a href="https://www.imdb.com/name/nm15184615/" target="_blank" class="footer-link">IMDb</a>
+    <a href="https://www.imdb.com/search/title/?companies=co1150160" target="_blank" class="footer-link">IMDb</a>
     <a href="https://www.instagram.com/humotionpictures" target="_blank" class="footer-link">Instagram</a>
     <a href="#" class="footer-link" id="footer-mentions">Mentions l&#233;gales</a>
   </div>
   <span class="footer-copy">&#169; 2026 Humotion Pictures</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // HERO SLIDER
-var heroSlide=0;
-function goToHeroSlide(n){heroSlide=n;document.getElementById('heroTrack').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.hero-dot').forEach(function(d,i){d.classList.toggle('active',i===n);});}
-setInterval(function(){goToHeroSlide((heroSlide+1)%4);},4500);
-
-// FOCUS SLIDER
-var focusSlide=0;
-function goToFocusSlide(n){focusSlide=n;document.getElementById('focusTrack').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.focus-dot').forEach(function(d,i){d.classList.toggle('active',i===n);});}
-setInterval(function(){goToFocusSlide((focusSlide+1)%4);},3500);
+var heroSlide = 0;
+function goToHeroSlide(n){
+  heroSlide = n;
+  document.getElementById('heroTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
+  document.querySelectorAll('.hero-dot').forEach(function(d, i){
+    d.classList.toggle('active', i === n);
+  });
+}
+setInterval(function(){
+  goToHeroSlide((heroSlide + 1) % 4);
+}, 4500);
 
 // EMAIL
-var u='contact';var d='humotionpictures.fr';var el=document.getElementById('contact-email');if(el){el.href='mailto:'+u+'@'+d;el.textContent=u+'@'+d;}
+var u = 'contact';
+var d = 'humotionpictures.fr';
+var el = document.getElementById('contact-email');
+if(el){
+  el.href = 'mailto:' + u + '@' + d;
+  el.textContent = u + '@' + d;
+}
 
 // LANG
-var t={
-  fr:{
-    'nav-projets':'Projets','nav-apropos':'A propos','nav-fondateur':'Fondateur',
-    'hero-eyebrow':'Production cin\u00e9matographique ind\u00e9pendante',
-    'hero-title':'Humotion Pictures d\u00e9veloppe des films ancr\u00e9s dans le r\u00e9el, port\u00e9s par l\u2019\u00e9motion, la performance d\u2019acteur et la v\u00e9rit\u00e9 des relations humaines.',
-    'hero-btn1':'D\u00e9couvrir les projets','hero-btn2':'Nous contacter',
-    'lbl-projets':'Projets','title-projets':'Nos projets',
-    'oracle-label':'Court-m\u00e9trage \u00b7 Fiction fantastique',
-    'oracle-status-val':'Termin\u00e9','oracle-link':'En savoir plus \u2199',
-    'bonhomme-label':'Court-m\u00e9trage \u00b7 Drame intimiste',
-    'bonhomme-type':'En d\u00e9veloppement','bonhomme-coprod':'Coproduction recherch\u00e9e',
-    'bonhomme-link':'En savoir plus \u2192',
-    'focus-label':'Projet principal',
-    'focus-logline':'Dix mois apr\u00e8s avoir sauv\u00e9 la vie de son fr\u00e8re, Daniel attend toujours qu\u2019il comprenne ce que ce jour-l\u00e0 a vraiment co\u00fbt\u00e9.',
-    'tag1':'Fraternit\u00e9','tag2':'Masculinit\u00e9','tag3':'Drame intimiste','tag4':'Deuil \u00e9motionnel',
-    'focus-btn':'Demander le dossier \u2192',
-    'lbl-apropos':'A propos','title-apropos':'Humotion Pictures',
-    'bio-p1':'Fond\u00e9e en 2025 par Michael KIBAMBI, Humotion Pictures est une structure ind\u00e9pendante de d\u00e9veloppement et de production cin\u00e9matographique. La soci\u00e9t\u00e9 d\u00e9fend des r\u00e9cits ancr\u00e9s dans le r\u00e9el, o\u00f9 l\u2019intime rejoint l\u2019universel \u00e0 travers la justesse du jeu, la densit\u00e9 des relations humaines et la v\u00e9rit\u00e9 \u00e9motionnelle.',
-    'bio-p2':'Chaque projet port\u00e9 par Humotion Pictures cherche \u00e0 faire \u00e9merger une \u00e9motion sinc\u00e8re, sans artifice, \u00e0 partir de situations profond\u00e9ment humaines.',
-    'lbl-fondateur':'Le fondateur','title-fondateur':'Michael KIBAMBI',
-    'fondateur-role':'Fondateur \u00b7 Acteur \u00b7 R\u00e9alisateur',
-    'fondateur-bio':'Form\u00e9 au jeu d\u2019acteur, Michael KIBAMBI d\u00e9veloppe une approche de la r\u00e9alisation profond\u00e9ment ancr\u00e9e dans la performance. Convaincu que l\u2019\u00e9motion juste na\u00eet de la v\u00e9rit\u00e9 des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
+var t = {
+  fr: {
+    'nav-projets':'Projets',
+    'nav-apropos':'À propos',
+    'nav-fondateur':'Fondateur',
+    'hero-eyebrow':'Production cinématographique indépendante',
+    'hero-title':'Humotion Pictures développe des films intimes où le jeu d’acteur, les tensions humaines et la vérité émotionnelle sont au cœur de la mise en scène.',
+    'hero-btn1':'Découvrir les projets',
+    'hero-btn2':'Nous contacter',
+    'lbl-projets':'Projets',
+    'title-projets':'Nos projets',
+    'oracle-label':'Court-métrage · Fiction fantastique',
+    'oracle-status-val':'Terminé',
+    'oracle-link':'En savoir plus ↗',
+    'bonhomme-label':'Court-métrage · Drame intimiste',
+    'bonhomme-type':'En développement',
+    'bonhomme-coprod':'Coproduction recherchée',
+    'bonhomme-link':'Demander le dossier →',
+    'lbl-apropos':'À propos',
+    'bio-p1':'Fondée en 2025 par Michael KIBAMBI, Humotion Pictures est une structure indépendante de développement et de production cinématographique. La société défend des récits ancrés dans le réel, où l’intime rejoint l’universel à travers la justesse du jeu, la densité des relations humaines et la vérité émotionnelle.',
+    'bio-p2':'Chaque projet porté par Humotion Pictures cherche à faire émerger une émotion sincère, sans artifice, à partir de situations profondément humaines.',
+    'lbl-fondateur':'Le fondateur',
+    'title-fondateur':'Michael KIBAMBI',
+    'fondateur-role':'Fondateur · Acteur · Réalisateur',
+    'fondateur-bio':'Formé au jeu d’acteur, Michael KIBAMBI développe une approche de la réalisation profondément ancrée dans la performance. Convaincu que l’émotion juste naît de la vérité des corps et des situations, il fonde Humotion Pictures en 2025 pour produire des histoires humaines, intimes et universelles.',
     'fondateur-contact-btn':'Contact',
-    'lbl-cred':'S\u00e9lections & R\u00e9f\u00e9rences','title-cred':'Parcours',
-    'cred-desc1':'S\u00e9lection officielle avec Oracle Stone',
-    'cred-year2':'En d\u00e9veloppement','cred-desc2':'Court-m\u00e9trage en d\u00e9veloppement \u2014 Coproduction recherch\u00e9e',
-    'cred-year3':'Sur demande','cred-title3':'Dossier de pr\u00e9sentation','cred-desc3':'Synopsis, note d\u2019intention et budget disponibles sur demande',
+    'lbl-cred':'Sélections & Références',
+    'title-cred':'Parcours',
     'contact-intro':'Humotion Pictures est ouverte aux discussions autour de la coproduction, du développement de projets, des collaborations artistiques et des opportunités de représentation.',
     'title-contact':'Travaillons ensemble',
-    'ctag1':'Coproduction','ctag2':'D\u00e9veloppement','ctag3':'Collaborations','ctag4':'Repr\u00e9sentation',
-    'lbl-structure':'Structure','lbl-based':'Bas\u00e9e dans','location':'Hauts-de-France',
-    'lbl-projet':'Projet en d\u00e9veloppement','contact-projet':'Bonhomme \u2014 Dossier disponible sur demande',
-    'lbl-form-name':'Nom','lbl-form-message':'Message','btn-submit':'Envoyer \u2192',
-    'footer-location':'Hauts-de-France \u00b7 France','footer-mentions':'Mentions l\u00e9gales'
+    'ctag1':'Coproduction',
+    'ctag2':'Développement',
+    'ctag3':'Collaborations',
+    'ctag4':'Représentation',
+    'lbl-structure':'Structure',
+    'lbl-based':'Basée dans',
+    'location':'Hauts-de-France',
+    'lbl-projet':'Projet en développement',
+    'contact-projet':'Bonhomme — Dossier disponible sur demande',
+    'lbl-form-name':'Nom',
+    'lbl-form-message':'Message',
+    'btn-submit':'Envoyer →',
+    'footer-location':'Hauts-de-France · France',
+    'footer-mentions':'Mentions légales'
   },
-  en:{
-    'nav-projets':'Projects','nav-apropos':'About','nav-fondateur':'Founder',
+  en: {
+    'nav-projets':'Projects',
+    'nav-apropos':'About',
+    'nav-fondateur':'Founder',
     'hero-eyebrow':'Independent film production',
     'hero-title':'Humotion Pictures develops intimate films where performance, human tensions and emotional truth are at the heart of the work.',
-    'hero-btn1':'Explore our projects','hero-btn2':'Contact us',
-    'lbl-projets':'Projects','title-projets':'Our projects',
-    'oracle-label':'Short film \u00b7 Fantasy fiction',
-    'oracle-status-val':'Completed','oracle-link':'Learn more \u2199',
-    'bonhomme-label':'Short film \u00b7 Intimate drama',
-    'bonhomme-type':'In development','bonhomme-coprod':'Co-production sought',
-    'bonhomme-link':'Learn more \u2192',
-    'focus-label':'Main project',
-    'focus-logline':'Ten months after saving his brother\'s life, Daniel is still waiting for him to understand what that day truly cost.',
-    'tag1':'Brotherhood','tag2':'Masculinity','tag3':'Intimate drama','tag4':'Emotional grief',
-    'focus-btn':'Request the dossier \u2192',
-    'lbl-apropos':'About','title-apropos':'Humotion Pictures',
+    'hero-btn1':'Explore our projects',
+    'hero-btn2':'Contact us',
+    'lbl-projets':'Projects',
+    'title-projets':'Our projects',
+    'oracle-label':'Short film · Fantasy fiction',
+    'oracle-status-val':'Completed',
+    'oracle-link':'Learn more ↗',
+    'bonhomme-label':'Short film · Intimate drama',
+    'bonhomme-type':'In development',
+    'bonhomme-coprod':'Co-production sought',
+    'bonhomme-link':'Request the dossier →',
+    'lbl-apropos':'About',
     'bio-p1':'Founded in 2025 by Michael KIBAMBI, Humotion Pictures is an independent film development and production company. The company champions stories rooted in reality, where the intimate meets the universal through truthful performance, the depth of human relationships and emotional sincerity.',
-    'bio-p2':'Every project carried by Humotion Pictures seeks to bring forth genuine emotion \u2014 unforced, free of artifice \u2014 drawn from deeply human situations.',
-    'lbl-fondateur':'The founder','title-fondateur':'Michael KIBAMBI',
-    'fondateur-role':'Founder \u00b7 Actor \u00b7 Director',
+    'bio-p2':'Every project carried by Humotion Pictures seeks to bring forth genuine emotion, unforced and free of artifice, drawn from deeply human situations.',
+    'lbl-fondateur':'The founder',
+    'title-fondateur':'Michael KIBAMBI',
+    'fondateur-role':'Founder · Actor · Director',
     'fondateur-bio':'Trained as an actor, Michael KIBAMBI brings a performance-driven approach to directing. Convinced that genuine emotion comes from the truth of bodies and situations, he founded Humotion Pictures in 2025 to produce human, intimate and universal stories.',
     'fondateur-contact-btn':'Contact',
-    'lbl-cred':'Selections & References','title-cred':'Track record',
-    'cred-desc1':'Official selection with Oracle Stone',
-    'cred-year2':'In development','cred-desc2':'Short film in development \u2014 Co-production sought',
-    'cred-year3':'On request','cred-title3':'Presentation package','cred-desc3':'Synopsis, director\'s statement and budget available on request',
+    'lbl-cred':'Selections & References',
+    'title-cred':'Track record',
     'contact-intro':'Humotion Pictures is open to discussions around co-production, project development, artistic collaborations and representation opportunities.',
     'title-contact':"Let's work together",
-    'ctag1':'Co-production','ctag2':'Development','ctag3':'Collaborations','ctag4':'Representation',
-    'lbl-structure':'Company','lbl-based':'Based in','location':'Hauts-de-France, France',
-    'lbl-projet':'Project in development','contact-projet':'Bonhomme \u2014 Dossier available on request',
-    'lbl-form-name':'Name','lbl-form-message':'Message','btn-submit':'Send \u2192',
-    'footer-location':'Hauts-de-France \u00b7 France','footer-mentions':'Legal notice'
+    'ctag1':'Co-production',
+    'ctag2':'Development',
+    'ctag3':'Collaborations',
+    'ctag4':'Representation',
+    'lbl-structure':'Company',
+    'lbl-based':'Based in',
+    'location':'Hauts-de-France, France',
+    'lbl-projet':'Project in development',
+    'contact-projet':'Bonhomme — Dossier available on request',
+    'lbl-form-name':'Name',
+    'lbl-form-message':'Message',
+    'btn-submit':'Send →',
+    'footer-location':'Hauts-de-France · France',
+    'footer-mentions':'Legal notice'
   }
 };
 
 function setLang(lang){
-  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
-  document.querySelectorAll('.lang-btn').forEach(function(b){if(b.getAttribute('onclick')==="setLang('"+lang+"')")b.classList.add('active');});
-  var strings=t[lang];
-  for(var id in strings){va
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.remove('active');
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    if(b.getAttribute('onclick') === "setLang('" + lang + "')"){
+      b.classList.add('active');
+    }
+  });
+  var strings = t[lang];
+  for(var id in strings){
+    var el = document.getElementById(id);
+    if(el) el.textContent = strings[id];
+  }
+  var mobileLinks = document.querySelectorAll('#mobileMenu a');
+  if(lang === 'en'){
+    if(mobileLinks[0]) mobileLinks[0].textContent = 'Projects';
+    if(mobileLinks[1]) mobileLinks[1].textContent = 'About';
+    if(mobileLinks[2]) mobileLinks[2].textContent = 'Founder';
+    if(mobileLinks[3]) mobileLinks[3].textContent = 'Contact';
+  } else {
+    if(mobileLinks[0]) mobileLinks[0].textContent = 'Projets';
+    if(mobileLinks[1]) mobileLinks[1].textContent = 'À propos';
+    if(mobileLinks[2]) mobileLinks[2].textContent = 'Fondateur';
+    if(mobileLinks[3]) mobileLinks[3].textContent = 'Contact';
+  }
+  document.documentElement.lang = lang;
+  var url = new URL(window.location.href);
+  if(lang === 'en'){
+    url.searchParams.set('lang', 'en');
+  } else {
+    url.searchParams.delete('lang');
+  }
+  window.history.replaceState({}, '', url.toString());
+}
+
+function toggleMenu(){
+  var m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+
+var urlParams = new URLSearchParams(window.location.search);
+if(urlParams.get('lang') === 'en'){
+  setLang('en');
+}
+</script>
+</body>
+</html>
