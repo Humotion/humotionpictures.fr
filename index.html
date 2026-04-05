@@ -134,13 +134,15 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 
 @media(max-width:768px){
   nav{padding:14px 20px;}
+  #credibilite{padding:72px 20px !important;}
   .nav-links{display:none;}
   .nav-logo img{height:44px;}
   section{padding:72px 20px;}
   .projets-grid{grid-template-columns:1fr;}
   .fondateur-inner{grid-template-columns:1fr;gap:40px;}
 
-  .cred-grid{grid-template-columns:1fr;}
+  .cred-grid{grid-template-columns:1fr;gap:0;}
+  .cred-item{padding:24px 20px;}
   .contact-grid{grid-template-columns:1fr;gap:40px;}
   footer{flex-direction:column;align-items:flex-start;gap:16px;}
 }
@@ -253,7 +255,7 @@ footer{background:var(--black);padding:40px 10%;display:flex;justify-content:spa
 <section id="credibilite" style="background:var(--black);padding:100px 10%;">
   <p class="section-label" id="lbl-cred">Sélections &amp; Références</p>
   <h2 class="section-title" style="color:white;" id="title-cred">Parcours</h2>
-  <div class="cred-grid" style="grid-template-columns:repeat(3,1fr);">
+  <div class="cred-grid">
     <div class="cred-item">
       <p class="cred-year" id="cred-sel1">Sélection officielle</p>
       <p class="cred-title">Grifo Festival</p>
